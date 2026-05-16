@@ -1,0 +1,79 @@
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Organization",
+  "name": "Genius Sheets",
+  "url": "{{ site.url }}",
+  "logo": "{{ site.url }}/assets/images/logos/logo-nav.png",
+  "sameAs": [
+    "{{ site.social_links.linkedin }}",
+    "{{ site.social_links.twitter }}",
+    "{{ site.social_links.youtube }}"
+  ]
+}
+</script>
+{% if page.url == "/" or page.url == "/index.html" %}
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "SoftwareApplication",
+  "name": "Genius Sheets",
+  "operatingSystem": "Web, Windows, macOS",
+  "applicationCategory": "BusinessApplication",
+  "description": "{{ site.description }}",
+  "url": "{{ site.url }}",
+  "offers": {
+    "@type": "Offer",
+    "price": "15.00",
+    "priceCurrency": "USD"
+  },
+  "aggregateRating": {
+    "@type": "AggregateRating",
+    "ratingValue": "4.8",
+    "ratingCount": "50"
+  }
+}
+</script>
+{% endif %}
+{% if page.url == "/" or page.url == "/index.html" or page.url contains "/pricing" %}
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "Does Genius Sheets offer a free trial?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes. You can sign up with no credit card down for a two-week free trial. To upgrade, contact us at info@geniussheets.us."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Do you offer team plans?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes, for larger teams and organizations we offer customized enterprise plans. Contact info@geniussheets.us to learn more."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What is your cancellation policy?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "You can cancel a monthly subscription at any time. Simply send an email to info@geniussheets.us."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How do I get started?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Connect your account to QuickBooks or Xero on the dashboard page of the website, then download either the Google Sheets or Excel add-in."
+      }
+    }
+  ]
+}
+</script>
+{% endif %}

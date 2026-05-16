@@ -8,10 +8,37 @@ location: "Philadelphia, PA"
 
 google_analytics: G-72PG6GMT2S
 
+# Paste your PostHog project API key here to enable session replay + autocapture.
+# Find it at: https://us.posthog.com/project/settings (Project API Key)
+posthog_key: "phc_wg3BTLfGYQ5nRYZ8vy9ruWxfzRsFvvo7ee7bdFkUaCXJ"
+posthog_host: "https://us.i.posthog.com"
+
+# Formspree endpoint for the contact form. Create a form at https://formspree.io/
+# then paste the form ID (the part after /f/) here.
+formspree_id: "mnjweoyr"
+
+# jekyll-seo-tag defaults
+author: Genius Sheets
+logo: /assets/images/logos/logo-nav.png
+twitter:
+  username: geniussheetsdev
+  card: summary_large_image
 social:
+  name: Genius Sheets
+  links:
+    - https://www.linkedin.com/company/geniussheets
+    - https://x.com/geniussheetsdev
+    - https://www.youtube.com/@GeniusSheets
+
+# Keep legacy social.* keys for header/footer templates that read them
+social_links:
   linkedin: "https://www.linkedin.com/company/geniussheets"
   twitter: "https://x.com/geniussheetsdev"
   youtube: "https://www.youtube.com/@GeniusSheets"
+
+plugins:
+  - jekyll-seo-tag
+  - jekyll-sitemap
 
 sass:
   sass_dir: _sass
@@ -22,3 +49,4 @@ exclude:
   - Gemfile.lock
   - node_modules
   - README.md
+  - MARKETING_PLAN.md

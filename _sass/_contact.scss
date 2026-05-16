@@ -67,3 +67,18 @@
     min-height: 120px;
   }
 }
+
+.form-status {
+  margin-top: 1rem;
+  font-size: 0.95rem;
+  min-height: 1.25rem;
+
+  &--success { color: #083c2f; font-weight: 600; }
+  &--error { color: #b00020; font-weight: 600; }
+}
+
+.contact-form-fallback {
+  text-align: center;
+  padding: 2rem;
+  font-size: 1.1rem;
+}

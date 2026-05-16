@@ -15,7 +15,8 @@ description: "Get in touch with Genius Sheets. We respond within 24 hours."
 <!-- Contact Section -->
 <section class="contact-section">
   <div class="container">
-    <form class="contact-form">
+    {% if site.formspree_id and site.formspree_id != "" %}
+    <form class="contact-form" id="contact-form" action="https://formspree.io/f/{{ site.formspree_id }}" method="POST">
       <div class="form-row">
         <div class="form-group">
           <label for="first-name">First Name</label>
@@ -38,8 +39,17 @@ description: "Get in touch with Genius Sheets. We respond within 24 hours."
         <label for="message">Message</label>
         <textarea id="message" name="message" rows="5" required></textarea>
       </div>
+      <input type="text" name="_gotcha" tabindex="-1" autocomplete="off" style="position:absolute;left:-9999px;">
+      <input type="hidden" name="_subject" value="New contact form submission — geniussheets.us">
       <button type="submit" class="btn btn-primary btn-block">Send Message</button>
+      <p class="form-status" id="contact-form-status" role="status" aria-live="polite"></p>
     </form>
+    {% else %}
+    <div class="contact-form-fallback">
+      <p>Email us directly at <a href="mailto:{{ site.email }}">{{ site.email }}</a> — we respond within 24 hours.</p>
+      <!-- TODO: set site.formspree_id in _config.yml to enable the contact form. -->
+    </div>
+    {% endif %}
   </div>
 </section>
 

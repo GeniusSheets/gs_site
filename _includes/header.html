@@ -1,0 +1,21 @@
+<header class="site-header">
+  <nav class="navbar">
+    <div class="container nav-container">
+      <a href="{{ '/' | relative_url }}" class="logo">
+        <img src="{{ '/assets/images/logos/logo-nav.png' | relative_url }}" alt="Genius Sheets" class="nav-logo">
+      </a>
+      <button class="nav-toggle" aria-label="Toggle navigation">
+        <span class="hamburger"></span>
+      </button>
+      <ul class="nav-links">
+        <li><a href="{{ '/quickstart' | relative_url }}" {% if page.url == '/quickstart' %}class="active"{% endif %}>Quickstart</a></li>
+        <li><a href="{{ '/pricing' | relative_url }}" {% if page.url == '/pricing' or page.url == '/pricing/' %}class="active"{% endif %}>Pricing</a></li>
+        <li><a href="{{ '/services' | relative_url }}" {% if page.url == '/services' or page.url == '/services/' %}class="active"{% endif %}>Services</a></li>
+      </ul>
+      <div class="nav-cta">
+        <a href="https://app.geniussheets.com" class="btn btn-outline">Log In</a>
+        <a href="https://app.geniussheets.com" class="btn btn-primary">Get Started</a>
+      </div>
+    </div>
+  </nav>
+</header>

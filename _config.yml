@@ -1,0 +1,23 @@
+title: Genius Sheets
+description: "Streamline financial reporting with seamless QuickBooks integration into Excel and Google Sheets."
+url: ""
+baseurl: ""
+
+email: info@geniussheets.us
+location: "Philadelphia, PA"
+
+social:
+  instagram: "#"
+  facebook: "https://facebook.com/GeniusSheets"
+  twitter: "https://twitter.com/GeniusSheets"
+  youtube: "#"
+
+sass:
+  sass_dir: _sass
+  style: compressed
+
+exclude:
+  - Gemfile
+  - Gemfile.lock
+  - node_modules
+  - README.md

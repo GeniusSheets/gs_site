@@ -1,0 +1,114 @@
+// Services
+.service-section {
+  padding: $section-padding;
+
+  &.alt {
+    background: $bg-light;
+  }
+}
+
+.service-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 64px;
+  align-items: center;
+
+  &.reverse {
+    .service-content {
+      order: 2;
+    }
+    .service-image {
+      order: 1;
+    }
+  }
+
+  @media (max-width: 768px) {
+    grid-template-columns: 1fr;
+    gap: 32px;
+
+    &.reverse {
+      .service-content { order: 1; }
+      .service-image { order: 2; }
+    }
+  }
+}
+
+.service-content {
+  h2 {
+    margin-bottom: 24px;
+    font-size: 2rem;
+  }
+}
+
+.service-list {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+
+  li {
+    padding-left: 28px;
+    position: relative;
+    color: $text-light;
+    font-size: 1rem;
+    line-height: 1.6;
+
+    &::before {
+      content: '✓';
+      position: absolute;
+      left: 0;
+      color: $primary;
+      font-weight: 700;
+    }
+  }
+}
+
+.service-image img {
+  width: 100%;
+  height: auto;
+  border-radius: $radius-lg;
+  display: block;
+}
+
+.image-placeholder {
+  background: linear-gradient(135deg, $bg-alt, $bg-light);
+  border-radius: $radius-lg;
+  aspect-ratio: 4 / 3;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 2px dashed $border;
+
+  span {
+    color: $text-muted;
+    font-weight: 600;
+    font-size: 1.125rem;
+  }
+}
+
+.services-cta {
+  padding: $section-padding;
+  text-align: center;
+  background: linear-gradient(135deg, $primary, $primary-dark);
+  color: white;
+
+  h2 {
+    color: white;
+    margin-bottom: 8px;
+  }
+
+  p {
+    color: rgba(255, 255, 255, 0.8);
+    font-size: 1.125rem;
+    margin-bottom: 32px;
+  }
+
+  .btn-primary {
+    background: white;
+    color: $primary;
+    border-color: white;
+
+    &:hover {
+      background: rgba(255, 255, 255, 0.9);
+    }
+  }
+}

@@ -1,0 +1,132 @@
+// Quickstart
+.quickstart-steps {
+  padding: $section-padding;
+  max-width: 720px;
+  margin: 0 auto;
+}
+
+.qs-step {
+  display: flex;
+  gap: 24px;
+  padding: 32px 0;
+  border-bottom: 1px solid $border;
+
+  &:last-child {
+    border-bottom: none;
+  }
+
+  @media (max-width: 480px) {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+}
+
+.qs-step-number {
+  width: 48px;
+  height: 48px;
+  min-width: 48px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, $primary, $primary-dark);
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.25rem;
+  font-weight: 700;
+}
+
+.qs-step-content {
+  h2 {
+    font-size: 1.375rem;
+    margin-bottom: 8px;
+  }
+
+  p {
+    color: $text-light;
+    font-size: 0.9375rem;
+    line-height: 1.7;
+    margin-bottom: 16px;
+  }
+}
+
+.quickstart-features {
+  padding: $section-padding;
+  background: $bg-light;
+  max-width: 720px;
+  margin: 0 auto;
+
+  .section-title {
+    margin-bottom: 48px;
+  }
+}
+
+.qs-feature {
+  margin-bottom: 40px;
+  padding-bottom: 40px;
+  border-bottom: 1px solid $border;
+
+  &:last-child {
+    border-bottom: none;
+    margin-bottom: 0;
+    padding-bottom: 0;
+  }
+
+  h3 {
+    font-size: 1.25rem;
+    margin-bottom: 12px;
+    color: $secondary;
+  }
+
+  p {
+    color: $text-light;
+    font-size: 0.9375rem;
+    line-height: 1.7;
+    margin-bottom: 12px;
+  }
+
+  ul {
+    list-style: none;
+    padding: 0;
+    margin: 0 0 12px;
+
+    li {
+      padding: 6px 0 6px 20px;
+      position: relative;
+      color: $text-light;
+      font-size: 0.9375rem;
+
+      &::before {
+        content: "\2713";
+        position: absolute;
+        left: 0;
+        color: $success;
+        font-weight: 700;
+      }
+    }
+  }
+
+  code {
+    background: $bg-alt;
+    padding: 4px 8px;
+    border-radius: $radius-sm;
+    font-size: 0.875rem;
+    color: $primary;
+  }
+}
+
+.quickstart-cta {
+  padding: $section-padding;
+  text-align: center;
+  background: $bg-light;
+
+  h2 {
+    margin-bottom: 12px;
+  }
+
+  p {
+    color: $text-light;
+    margin-bottom: 32px;
+    font-size: 1.125rem;
+  }
+}

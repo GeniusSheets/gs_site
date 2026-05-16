@@ -1,0 +1,63 @@
+---
+layout: default
+title: "Contact Us"
+description: "Get in touch with Genius Sheets. We respond within 24 hours."
+---
+
+<!-- Contact Hero -->
+<section class="page-hero">
+  <div class="container">
+    <h1>Contact Us</h1>
+    <p class="page-subtitle">We'd love to hear from you. Reach out and we'll respond within 24 hours.</p>
+  </div>
+</section>
+
+<!-- Contact Section -->
+<section class="contact-section">
+  <div class="container">
+    <div class="contact-grid">
+      <div class="contact-info">
+        <h2>Get In Touch</h2>
+        <div class="info-item">
+          <h4>Email</h4>
+          <p><a href="mailto:{{ site.email }}">{{ site.email }}</a></p>
+        </div>
+        <div class="info-item">
+          <h4>Location</h4>
+          <p>{{ site.location }}</p>
+        </div>
+        <div class="info-item">
+          <h4>Response Time</h4>
+          <p>Within 24 hours</p>
+        </div>
+      </div>
+      <div class="contact-form-wrapper">
+        <form class="contact-form">
+          <div class="form-row">
+            <div class="form-group">
+              <label for="first-name">First Name</label>
+              <input type="text" id="first-name" name="first_name" required>
+            </div>
+            <div class="form-group">
+              <label for="last-name">Last Name</label>
+              <input type="text" id="last-name" name="last_name" required>
+            </div>
+          </div>
+          <div class="form-group">
+            <label for="email">Email</label>
+            <input type="email" id="email" name="email" required>
+          </div>
+          <div class="form-group">
+            <label for="phone">Phone</label>
+            <input type="tel" id="phone" name="phone">
+          </div>
+          <div class="form-group">
+            <label for="message">Message</label>
+            <textarea id="message" name="message" rows="5" required></textarea>
+          </div>
+          <button type="submit" class="btn btn-primary btn-block">Send Message</button>
+        </form>
+      </div>
+    </div>
+  </div>
+</section>

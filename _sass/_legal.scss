@@ -1,0 +1,42 @@
+.legal-content {
+  padding: 64px 0 96px;
+
+  .container {
+    max-width: 760px;
+  }
+
+  h2 {
+    font-size: 1.375rem;
+    font-weight: 700;
+    margin: 48px 0 12px;
+    color: $heading;
+  }
+
+  h3 {
+    font-size: 1.1rem;
+    font-weight: 600;
+    margin: 32px 0 8px;
+    color: $heading;
+  }
+
+  p {
+    color: $text;
+    line-height: 1.75;
+    margin-bottom: 16px;
+  }
+
+  ul {
+    margin: 0 0 16px 24px;
+    color: $text;
+    line-height: 1.75;
+
+    li {
+      margin-bottom: 8px;
+    }
+  }
+
+  a {
+    color: $primary;
+    text-decoration: underline;
+  }
+}

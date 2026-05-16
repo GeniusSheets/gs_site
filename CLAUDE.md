@@ -4,7 +4,7 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 
 ## Project
 
-Genius Sheets marketing website — a Jekyll static site for a financial reporting SaaS that integrates QuickBooks Online with Excel and Google Sheets.
+Genius Sheets marketing website — a Jekyll static site for a financial reporting SaaS that integrates QuickBooks Online and Xero with Excel and Google Sheets.
 
 ## Build & Development Commands
 

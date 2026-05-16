@@ -140,6 +140,10 @@
   font-size: 3rem;
   font-weight: 800;
   color: $secondary;
+
+  &.price-amount--text {
+    font-size: 1.75rem;
+  }
 }
 
 .price-period {

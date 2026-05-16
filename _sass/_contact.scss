@@ -1,45 +1,17 @@
 // Contact
+.calendly-section {
+  padding: $section-padding;
+  background: $bg-light;
+
+  .section-title { margin-bottom: 8px; }
+  .section-subtitle { margin-bottom: 32px; }
+}
+
 .contact-section {
   padding: $section-padding;
-}
 
-.contact-grid {
-  display: grid;
-  grid-template-columns: 1fr 1.5fr;
-  gap: 64px;
-
-  @media (max-width: 768px) {
-    grid-template-columns: 1fr;
-    gap: 48px;
-  }
-}
-
-.contact-info {
-  h2 {
-    margin-bottom: 32px;
-  }
-
-  .info-item {
-    margin-bottom: 24px;
-
-    h4 {
-      color: $text-muted;
-      font-weight: 600;
-      font-size: 0.8125rem;
-      text-transform: uppercase;
-      letter-spacing: 0.5px;
-      margin-bottom: 8px;
-    }
-
-    p {
-      font-size: 1rem;
-      color: $text;
-    }
-
-    a {
-      color: $primary;
-      font-weight: 500;
-    }
+  .container {
+    max-width: 640px;
   }
 }
 

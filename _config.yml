@@ -9,10 +9,9 @@ location: "Philadelphia, PA"
 google_analytics: G-72PG6GMT2S
 
 social:
-  instagram: "#"
-  facebook: "https://facebook.com/GeniusSheets"
-  twitter: "https://twitter.com/GeniusSheets"
-  youtube: "#"
+  linkedin: "https://www.linkedin.com/company/geniussheets"
+  twitter: "https://x.com/geniussheetsdev"
+  youtube: "https://www.youtube.com/@GeniusSheets"
 
 sass:
   sass_dir: _sass

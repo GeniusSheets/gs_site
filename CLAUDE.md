@@ -35,3 +35,4 @@ bundle exec jekyll clean                # Remove generated files
 - Font: Inter (loaded via Google Fonts in `default.html`)
 - New page styles go in a new `_sass/_pagename.scss` partial, imported in `assets/css/main.scss`
 - Contact form and CTA buttons currently use placeholder `#` links (no backend wired up)
+- Never use em-dashes (`—`, `&mdash;`, `&#8212;`) in website copy. Use commas, colons, parentheses, or split into separate sentences instead.

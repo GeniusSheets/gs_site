@@ -40,13 +40,13 @@ description: "Get in touch with Genius Sheets. We respond within 24 hours."
         <textarea id="message" name="message" rows="5" required></textarea>
       </div>
       <input type="text" name="_gotcha" tabindex="-1" autocomplete="off" style="position:absolute;left:-9999px;">
-      <input type="hidden" name="_subject" value="New contact form submission — geniussheets.us">
+      <input type="hidden" name="_subject" value="New contact form submission: geniussheets.us">
       <button type="submit" class="btn btn-primary btn-block">Send Message</button>
       <p class="form-status" id="contact-form-status" role="status" aria-live="polite"></p>
     </form>
     {% else %}
     <div class="contact-form-fallback">
-      <p>Email us directly at <a href="mailto:{{ site.email }}">{{ site.email }}</a> — we respond within 24 hours.</p>
+      <p>Email us directly at <a href="mailto:{{ site.email }}">{{ site.email }}</a>, and we respond within 24 hours.</p>
       <!-- TODO: set site.formspree_id in _config.yml to enable the contact form. -->
     </div>
     {% endif %}

@@ -1,4 +1,17 @@
 // Contact
+.referral-section {
+  padding: $section-padding;
+  border-top: 1px solid $border;
+
+  .section-title { margin-bottom: 8px; }
+
+  .section-subtitle {
+    max-width: 640px;
+    margin: 0 auto;
+    margin-bottom: 0;
+  }
+}
+
 .calendly-section {
   padding: $section-padding;
   background: $bg-light;

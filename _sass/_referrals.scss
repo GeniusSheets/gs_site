@@ -1,0 +1,44 @@
+// Referrals
+.referral-detail {
+  padding: $section-padding;
+
+  .container {
+    max-width: 960px;
+  }
+}
+
+.referral-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+
+  @media (max-width: 768px) {
+    grid-template-columns: 1fr;
+  }
+}
+
+.referral-card {
+  padding: 28px;
+  background: $bg-light;
+  border-radius: $radius-sm;
+
+  h3 {
+    margin-bottom: 12px;
+  }
+
+  p {
+    color: $text-light;
+    margin: 0;
+  }
+}
+
+.referral-cta {
+  text-align: center;
+  margin-top: 48px;
+
+  .referral-note {
+    margin-top: 16px;
+    font-size: 0.9375rem;
+    color: $text-light;
+  }
+}

@@ -3,6 +3,8 @@ description: "Custom Excel and Google Sheets reporting for multi-entity finance 
 url: "https://geniussheets.us"
 baseurl: ""
 
+app_url: "https://app.geniussheets.com"
+
 email: info@geniussheets.us
 location: "Philadelphia, PA"
 
@@ -50,3 +52,4 @@ exclude:
   - node_modules
   - README.md
   - MARKETING_PLAN.md
+  - whats_new.md

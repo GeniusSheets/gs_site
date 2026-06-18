@@ -9,6 +9,7 @@
       </button>
       <ul class="nav-links">
         <li><a href="{{ '/quickstart' | relative_url }}" {% if page.url == '/quickstart' %}class="active"{% endif %}>Quickstart</a></li>
+        <li><a href="{{ '/whats-new' | relative_url }}" {% if page.url == '/whats-new' or page.url == '/whats-new/' %}class="active"{% endif %}>What&rsquo;s New</a></li>
         <li><a href="{{ '/pricing' | relative_url }}" {% if page.url == '/pricing' or page.url == '/pricing/' %}class="active"{% endif %}>Pricing</a></li>
         <li><a href="{{ '/services' | relative_url }}" {% if page.url == '/services' or page.url == '/services/' %}class="active"{% endif %}>Services</a></li>
       </ul>

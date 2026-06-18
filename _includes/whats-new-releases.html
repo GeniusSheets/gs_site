@@ -1,0 +1,34 @@
+{% assign app_url = site.app_url | default: "https://app.geniussheets.com" %}
+{% assign app_link_root = 'href="' | append: app_url | append: '/' %}
+
+{% for year_group in site.data.whats_new.years %}
+  <h2 id="{{ year_group.year }}" class="whats-new-year">{{ year_group.year }}</h2>
+
+  {% for month_group in year_group.months %}
+    <section class="whats-new-month">
+      <h3 id="{{ month_group.id }}" class="whats-new-month-title">{{ month_group.month }}</h3>
+
+      {% for item in month_group.items %}
+        <article class="whats-new-entry">
+          <h4>{{ item.title }}</h4>
+
+          {% if item.body_html %}
+            <div class="whats-new-body">
+              {{ item.body_html | replace: 'href="/', app_link_root }}
+            </div>
+          {% endif %}
+
+          {% if item.platforms %}
+            <div class="whats-new-platforms">
+              {% for platform in item.platforms %}
+                <span class="whats-new-platform">{{ platform }}</span>
+              {% endfor %}
+            </div>
+          {% endif %}
+        </article>
+      {% endfor %}
+    </section>
+  {% endfor %}
+
+  <p class="whats-new-back"><a href="#contents">&uarr; Back to contents</a></p>
+{% endfor %}

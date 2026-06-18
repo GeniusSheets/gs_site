@@ -1,0 +1,87 @@
+.whats-new-content {
+  padding-top: 0;
+}
+
+.whats-new-nav {
+  background: $bg-light;
+  border: 1px solid $border;
+  border-radius: 8px;
+  padding: 16px 24px;
+  margin-bottom: 2rem;
+
+  h2 {
+    margin-top: 0;
+    font-size: 1.1rem;
+  }
+
+  ul {
+    margin: 0;
+    line-height: 1.9;
+  }
+}
+
+.whats-new-year {
+  margin-top: 2.5rem;
+}
+
+.whats-new-month {
+  margin-bottom: 2rem;
+}
+
+.whats-new-month-title {
+  font-size: 1.25rem;
+  margin: 0 0 1rem;
+  color: $text;
+}
+
+.whats-new-entry {
+  border-bottom: 1px solid $border;
+  padding-bottom: 1.25rem;
+  margin-bottom: 1.25rem;
+  margin-left: 0.5rem;
+
+  h4 {
+    margin-top: 0;
+    font-size: 1.05rem;
+  }
+}
+
+.whats-new-body {
+  p {
+    margin-bottom: 16px;
+  }
+
+  code {
+    font-size: 0.9em;
+    background: $bg-light;
+    padding: 2px 6px;
+    border-radius: 4px;
+  }
+}
+
+.whats-new-platforms {
+  margin-top: 0.5rem;
+}
+
+.whats-new-platform {
+  display: inline-block;
+  font-size: 0.75rem;
+  font-weight: 600;
+  letter-spacing: 0.02em;
+  text-transform: uppercase;
+  color: $text-light;
+  background: $bg-light;
+  border-radius: 4px;
+  padding: 2px 8px;
+  margin-right: 6px;
+  margin-bottom: 4px;
+}
+
+.whats-new-back {
+  margin: 1rem 0 2rem;
+}
+
+.whats-new-footer-note {
+  color: $text-light;
+  margin-top: 1rem;
+}

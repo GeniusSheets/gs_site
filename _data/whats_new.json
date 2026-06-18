@@ -1,0 +1,214 @@
+{
+  "intro": "A high-level timeline of recent Genius Sheets releases across the web dashboard, Excel add-in, and Google Sheets add-in. Dates reflect when features shipped to production.",
+  "footer": "Missing something or want detail on a specific release? Email info@geniussheets.us.",
+  "years": [
+    {
+      "year": 2026,
+      "months": [
+        {
+          "month": "June 2026",
+          "id": "june-2026",
+          "items": [
+            {
+              "title": "Smoother QuickBooks and Xero connection flow",
+              "platforms": [
+                "Web dashboard"
+              ],
+              "body_html": "<p>Connecting accounting software now uses a full-page redirect instead of a popup window, which works more reliably across browsers and corporate security settings. Connection errors from the server are also surfaced directly in the callback screen.</p>"
+            },
+            {
+              "title": "Trial and billing visibility on the dashboard",
+              "platforms": [
+                "Web dashboard"
+              ],
+              "body_html": "<p>Trial accounts now show days remaining, free connection allowance, and a clearer path to set up billing. The billing page explains how connections and team seats work before checkout.</p>"
+            },
+            {
+              "title": "Faster dashboard load times",
+              "platforms": [
+                "Web dashboard"
+              ],
+              "body_html": "<p>The dashboard loads company and billing status with fewer round trips and caches your company list locally so returning visits feel instant. Asset caching and compression cut initial page load time as well.</p>"
+            },
+            {
+              "title": "Team billing and member management",
+              "platforms": [
+                "Web dashboard",
+                "Backend"
+              ],
+              "body_html": "<p>Self-serve billing is live: set the number of QuickBooks or Xero company connections and team seats you need, then manage members from the dashboard. Team members share a connection pool, and reconnecting QuickBooks updates every team copy of a company automatically.</p>"
+            },
+            {
+              "title": "Xero support in Google Sheets",
+              "platforms": [
+                "Google Sheets"
+              ],
+              "body_html": "<p>The Google Sheets add-in now supports Xero companies alongside QuickBooks Online, including P&L, balance sheet, and cash flow reports with the same formula workflow. The classic menu is the default again for a simpler experience.</p>"
+            },
+            {
+              "title": "More reliable Refresh Data in Excel",
+              "platforms": [
+                "Excel"
+              ],
+              "body_html": "<p>Refresh Data now warms the formula cache before recalculation, which fixes blank cells that sometimes appeared after a refresh. Error reporting is improved for faster troubleshooting.</p>"
+            }
+          ]
+        },
+        {
+          "month": "May 2026",
+          "id": "may-2026",
+          "items": [
+            {
+              "title": "Xero integration (general availability)",
+              "platforms": [
+                "All platforms"
+              ],
+              "body_html": "<p>Connect Xero organizations from the dashboard and pull Profit & Loss, Balance Sheet, and Cash Flow data into Excel and Google Sheets with the same GS formulas you already use for QuickBooks. Account names from Xero sync without the internal code prefix for easier formula matching.</p>"
+            },
+            {
+              "title": "Auto-refresh when you open a workbook",
+              "platforms": [
+                "Excel"
+              ],
+              "body_html": "<p>Excel now refreshes all Genius Sheets formulas automatically when you open a workbook, so numbers are current without an extra click.</p>"
+            }
+          ]
+        },
+        {
+          "month": "April 2026",
+          "id": "april-2026",
+          "items": [
+            {
+              "title": "Reconnect warnings on the dashboard",
+              "platforms": [
+                "Web dashboard"
+              ],
+              "body_html": "<p>Companies that need re-authentication are flagged on the dashboard so you can reconnect QuickBooks before formulas start failing in your spreadsheets.</p>"
+            }
+          ]
+        },
+        {
+          "month": "March 2026",
+          "id": "march-2026",
+          "items": [
+            {
+              "title": "Refresh All across every worksheet",
+              "platforms": [
+                "Excel",
+                "Google Sheets"
+              ],
+              "body_html": "<p>A new <strong>Refresh All</strong> button recalculates every Genius Sheets formula in the workbook, not just the active sheet. Use it when multiple tabs look stale after a sync or reconnect.</p>"
+            },
+            {
+              "title": "Better handling of Total column variants",
+              "platforms": [
+                "Excel",
+                "Google Sheets"
+              ],
+              "body_html": "<p>Reports that label the summary column as either \"Total\" or \"Total for\" are now recognized consistently, reducing mismatched numbers on filtered reports.</p>"
+            }
+          ]
+        },
+        {
+          "month": "January 2026",
+          "id": "january-2026",
+          "items": [
+            {
+              "title": "Product analytics and error monitoring",
+              "platforms": [
+                "Web dashboard",
+                "Excel"
+              ],
+              "body_html": "<p>Anonymous usage and error telemetry help us spot regressions faster. No change to how you use Genius Sheets day to day.</p>"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "year": 2025,
+      "months": [
+        {
+          "month": "December 2025",
+          "id": "december-2025",
+          "items": [
+            {
+              "title": "Xero preview (beta)",
+              "platforms": [
+                "Web dashboard",
+                "Backend"
+              ],
+              "body_html": "<p>Early Xero OAuth and report sync shipped behind a feature flag while we validated data accuracy against live Xero organizations.</p>"
+            }
+          ]
+        },
+        {
+          "month": "September 2025",
+          "id": "september-2025",
+          "items": [
+            {
+              "title": "Budget formulas",
+              "platforms": [
+                "Excel",
+                "Google Sheets",
+                "Backend"
+              ],
+              "body_html": "<p>New <code>GS.IS.BUDGET</code> / <code>GS_IS_BUDGET</code> formulas pull budget amounts from QuickBooks Online so you can compare actual vs budget in the same spreadsheet layout. See the <a href=\"/faq#income-statement-budget-gs-is-budget\">FAQ</a> for syntax and examples.</p>"
+            },
+            {
+              "title": "Range formulas for batch pulls",
+              "platforms": [
+                "Excel",
+                "Google Sheets"
+              ],
+              "body_html": "<p><code>GS.IS.RANGE</code>, <code>GS.BS.RANGE</code>, and <code>GS.CF.RANGE</code> (and underscore variants) let you pass ranges of categories or dates and get a 2D array back in one formula call.</p>"
+            },
+            {
+              "title": "Trial company limit",
+              "platforms": [
+                "Web dashboard"
+              ],
+              "body_html": "<p>Trial accounts can connect up to two QuickBooks Online companies. Upgrade to a paid plan to add more connections.</p>"
+            }
+          ]
+        },
+        {
+          "month": "August 2025",
+          "id": "august-2025",
+          "items": [
+            {
+              "title": "FAQ and in-app support chat",
+              "platforms": [
+                "Web dashboard",
+                "Excel",
+                "Google Sheets"
+              ],
+              "body_html": "<p>A searchable <a href=\"/faq\">FAQ</a> covers formulas, troubleshooting stale Excel data, and common errors. Live chat support is available from the website while you work through setup.</p>"
+            },
+            {
+              "title": "Faster syncs for active accounts",
+              "platforms": [
+                "Backend"
+              ],
+              "body_html": "<p>Nightly QuickBooks data pulls now focus on paying and trial accounts, reducing sync lag for active users.</p>"
+            }
+          ]
+        },
+        {
+          "month": "January 2025",
+          "id": "january-2025",
+          "items": [
+            {
+              "title": "Excel add-in store refresh",
+              "platforms": [
+                "Excel",
+                "Web dashboard"
+              ],
+              "body_html": "<p>Updated Excel marketplace listing, official Intuit Connect branding, and a modernized web app build for better compatibility with current browsers.</p>"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

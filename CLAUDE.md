@@ -21,7 +21,9 @@ bundle exec jekyll clean                # Remove generated files
 
 **Layout system:** Single layout (`_layouts/default.html`) with `_includes/header.html` and `_includes/footer.html`. All pages use front matter to set `layout: default`.
 
-**Pages:** `index.html`, `pricing.html`, `services.html`, `contact.html`, `quickstart.html` — all at the root level.
+**Pages:** `index.html`, `pricing.html`, `services.html`, `contact.html`, `quickstart.html`, `whats-new.html` — all at the root level.
+
+**Release log:** `whats-new.html` renders from `whats_new.md` (parsed to `_data/whats_new.json`). After editing the Markdown, run `npm run sync-whats-new` in `gs_web/`. See `_data/README-whats_new.md`.
 
 **SCSS structure:** `assets/css/main.scss` imports all partials from `_sass/`. Each partial maps to a page or component (`_home.scss`, `_pricing.scss`, etc.). Shared design tokens live in `_sass/_variables.scss` (colors, spacing, breakpoints). Breakpoints: 768px (tablet), 480px (mobile).
 

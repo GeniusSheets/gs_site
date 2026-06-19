@@ -42,6 +42,7 @@ Body text.
 - `#### Title` is one release within the month.
 - `Platforms:` line is optional; comma-separated tags.
 - Body is everything until the next `####`, `###`, or `##`.
+- Add an entry when a **major user-facing feature** ships; skip bugfixes and minor patches (see workspace `CLAUDE.md`).
 
 ## After editing
 

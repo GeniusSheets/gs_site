@@ -23,7 +23,9 @@ bundle exec jekyll clean                # Remove generated files
 
 **Pages:** `index.html`, `pricing.html`, `services.html`, `contact.html`, `quickstart.html`, `whats-new.html` — all at the root level.
 
-**Release log:** `whats-new.html` renders from `whats_new.md` (parsed to `_data/whats_new.json`). After editing the Markdown, run `npm run sync-whats-new` in `gs_web/`. See `_data/README-whats_new.md`.
+**Release log:** `whats_new.md` at the repo root is the canonical changelog (month-grouped Markdown). `whats-new.html` renders parsed data from `_data/whats_new.json`. After editing the Markdown, run `npm run sync-whats-new` in `gs_web/`. See `_data/README-whats_new.md`.
+
+**Agent duty:** When a major user-facing feature ships (across any GS repo), add an entry to `whats_new.md`, sync, and commit the Markdown plus generated JSON. Skip minor bugfixes and internal-only changes. See workspace `CLAUDE.md` for criteria.
 
 **SCSS structure:** `assets/css/main.scss` imports all partials from `_sass/`. Each partial maps to a page or component (`_home.scss`, `_pricing.scss`, etc.). Shared design tokens live in `_sass/_variables.scss` (colors, spacing, breakpoints). Breakpoints: 768px (tablet), 480px (mobile).
 

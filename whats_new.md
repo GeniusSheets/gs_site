@@ -10,6 +10,11 @@ Missing something or want detail on a specific release? Email info@geniussheets.
 
 ### June 2026
 
+#### 1099 vendor report (Excel)
+Platforms: Excel
+
+Pull your 1099-eligible QuickBooks vendors and what you paid each of them for the year straight into a worksheet, with a flag for who crossed the $600 threshold. It defaults to the prior calendar year on a cash basis. Use it to reconcile against QuickBooks' own 1099 list before filing. Payments made by card or third-party networks (reported separately on a 1099-K) are not included.
+
 #### Team billing and member management
 Platforms: Web dashboard, Backend
 

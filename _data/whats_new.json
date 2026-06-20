@@ -10,25 +10,11 @@
           "id": "june-2026",
           "items": [
             {
-              "title": "Smoother QuickBooks and Xero connection flow",
+              "title": "1099 vendor report (Excel)",
               "platforms": [
-                "Web dashboard"
+                "Excel"
               ],
-              "body_html": "<p>Connecting accounting software now uses a full-page redirect instead of a popup window, which works more reliably across browsers and corporate security settings. Connection errors from the server are also surfaced directly in the callback screen.</p>"
-            },
-            {
-              "title": "Trial and billing visibility on the dashboard",
-              "platforms": [
-                "Web dashboard"
-              ],
-              "body_html": "<p>Trial accounts now show days remaining, free connection allowance, and a clearer path to set up billing. The billing page explains how connections and team seats work before checkout.</p>"
-            },
-            {
-              "title": "Faster dashboard load times",
-              "platforms": [
-                "Web dashboard"
-              ],
-              "body_html": "<p>The dashboard loads company and billing status with fewer round trips and caches your company list locally so returning visits feel instant. Asset caching and compression cut initial page load time as well.</p>"
+              "body_html": "<p>Pull your 1099-eligible QuickBooks vendors and what you paid each of them for the year straight into a worksheet, with a flag for who crossed the $600 threshold. It defaults to the prior calendar year on a cash basis. Use it to reconcile against QuickBooks' own 1099 list before filing. Payments made by card or third-party networks (reported separately on a 1099-K) are not included.</p>"
             },
             {
               "title": "Team billing and member management",
@@ -162,13 +148,6 @@
                 "Google Sheets"
               ],
               "body_html": "<p><code>GS.IS.RANGE</code>, <code>GS.BS.RANGE</code>, and <code>GS.CF.RANGE</code> (and underscore variants) let you pass ranges of categories or dates and get a 2D array back in one formula call.</p>"
-            },
-            {
-              "title": "Trial company limit",
-              "platforms": [
-                "Web dashboard"
-              ],
-              "body_html": "<p>Trial accounts can connect up to two QuickBooks Online companies. Upgrade to a paid plan to add more connections.</p>"
             }
           ]
         },

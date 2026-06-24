@@ -10,6 +10,20 @@
           "id": "june-2026",
           "items": [
             {
+              "title": "Spend by Vendor report (Excel)",
+              "platforms": [
+                "Excel"
+              ],
+              "body_html": "<p>A new Spend by Vendor report totals what you paid each vendor over a period and pulls it straight into a worksheet. Use it to spot your largest payees at a glance or to break spending out by vendor alongside your other Genius Sheets reports.</p>"
+            },
+            {
+              "title": "Searchable company selector (Excel)",
+              "platforms": [
+                "Excel"
+              ],
+              "body_html": "<p>The company dropdown in the Excel add-in is now sorted alphabetically and type-to-filter searchable, so teams with many QuickBooks or Xero connections can jump to the right company quickly instead of scrolling a long list.</p>"
+            },
+            {
               "title": "1099 vendor report (Excel)",
               "platforms": [
                 "Excel"

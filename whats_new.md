@@ -10,18 +10,18 @@ Missing something or want detail on a specific release? Email info@geniussheets.
 
 ### June 2026
 
-#### Spend by Vendor report (Excel)
-Platforms: Excel
+#### Spend by Vendor report
+Platforms: Excel, Google Sheets
 
 A new Spend by Vendor report totals what you paid each vendor over a period and pulls it straight into a worksheet. Use it to spot your largest payees at a glance or to break spending out by vendor alongside your other Genius Sheets reports.
 
-#### Searchable company selector (Excel)
-Platforms: Excel
+#### Searchable company selector
+Platforms: Excel, Google Sheets
 
-The company dropdown in the Excel add-in is now sorted alphabetically and type-to-filter searchable, so teams with many QuickBooks or Xero connections can jump to the right company quickly instead of scrolling a long list.
+The company dropdown is now sorted alphabetically and type-to-filter searchable, so teams with many QuickBooks or Xero connections can jump to the right company quickly instead of scrolling a long list.
 
-#### 1099 vendor report (Excel)
-Platforms: Excel
+#### 1099 vendor report
+Platforms: Excel, Google Sheets
 
 Pull your 1099-eligible QuickBooks vendors and what you paid each of them for the year straight into a worksheet, with a flag for who crossed the $600 threshold. It defaults to the prior calendar year on a cash basis. Use it to reconcile against QuickBooks' own 1099 list before filing. Payments made by card or third-party networks (reported separately on a 1099-K) are not included.
 

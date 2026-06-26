@@ -10,6 +10,11 @@ Missing something or want detail on a specific release? Email info@geniussheets.
 
 ### June 2026
 
+#### AI Analyst: ask your financials in plain English
+Platforms: Web dashboard
+
+Ask questions about your finances in plain English and get instant answers, right in the web dashboard. The new AI Analyst tab reads your live QuickBooks data (Profit and Loss, balance sheet, cash flow, invoices, and customers) and answers questions like "What were my expenses last month?" or "Which invoices are overdue?" Pick a company, type a question, and get a clear, formatted answer. Conversations are kept per company so you can pick up where you left off.
+
 #### Spend by Vendor report
 Platforms: Excel, Google Sheets
 

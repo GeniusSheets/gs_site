@@ -8,6 +8,13 @@ Missing something or want detail on a specific release? Email info@geniussheets.
 
 ## 2026
 
+### July 2026
+
+#### Budget vs Actual report
+Platforms: Excel
+
+Compare your QuickBooks budget to actuals without leaving Excel. The new Budget vs Actual report builds a worksheet with Actual, Budget, Variance $, and Variance % for every account, month by month, plus a year-to-date summary. Pick a company, choose one of your QuickBooks budgets, set a date range, and the report fills in with live formulas that recalculate as your data refreshes. Quarterly and annual QuickBooks budgets are now supported too: their amounts are spread evenly across the months they cover, so every budget shows up in your monthly view.
+
 ### June 2026
 
 #### AI Analyst: ask your financials in plain English

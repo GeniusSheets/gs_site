@@ -28,7 +28,7 @@ description: "Get started with Genius Sheets in minutes. Connect QuickBooks or X
       <div class="qs-step-content">
         <h2>Create an Account</h2>
         <p>Sign up for a free account on the Genius Sheets website. No credit card required for your two-week free trial.</p>
-        <a href="https://app.geniussheets.com" class="btn btn-primary">Sign Up Free</a>
+        <a href="{{ site.app_url }}/signup" class="btn btn-primary" data-cta="signup" data-cta-location="quickstart_step2">Create Free Account</a>
       </div>
     </div>
 
@@ -101,8 +101,12 @@ description: "Get started with Genius Sheets in minutes. Connect QuickBooks or X
 <!-- Help CTA -->
 <section class="quickstart-cta">
   <div class="container">
-    <h2>Need Help Getting Started?</h2>
-    <p>Our team is here to help you every step of the way. Check out our <a href="https://www.youtube.com/@GeniusSheets" target="_blank" rel="noopener">YouTube channel</a> for video tutorials or reach out directly.</p>
-    <a href="mailto:info@geniussheets.us" class="btn btn-primary btn-lg">Contact Support</a>
+    <h2>Ready to Pull Your First Report?</h2>
+    <p>Create an account and connect an entity, or check our <a href="https://www.youtube.com/@GeniusSheets" target="_blank" rel="noopener">YouTube channel</a> for video walkthroughs.</p>
+    <div class="quickstart-cta-buttons">
+      <a href="{{ site.app_url }}/signup" class="btn btn-primary btn-lg" data-cta="signup" data-cta-location="quickstart_cta">Start Free Trial</a>
+      <a href="mailto:info@geniussheets.us" class="btn btn-outline btn-lg" data-cta="contact" data-cta-location="quickstart_support">Contact Support</a>
+    </div>
+    <p class="cta-reassurance">Two weeks free. No credit card required.</p>
   </div>
 </section>

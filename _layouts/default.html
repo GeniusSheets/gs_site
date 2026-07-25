@@ -38,6 +38,7 @@
     {{ content }}
   </main>
   {% include footer.html %}
+  {% unless page.hide_sticky_cta %}{% include sticky-cta.html %}{% endunless %}
   <script src="{{ '/assets/js/main.js' | relative_url }}"></script>
 </body>
 </html>

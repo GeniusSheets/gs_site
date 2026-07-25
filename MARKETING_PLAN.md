@@ -27,10 +27,13 @@ Create a PDF cheatsheet ("QuickBooks → Excel reporting in 5 steps" or "Xero to
 - POST to a second Formspree form OR a Brevo/MailerLite list (free up to 300–1000 contacts).
 - Redirect to a `/thanks` page that links the PDF and triggers `lead_capture` GA4 + PostHog events.
 
-### 2. Conversion tracking polish (1 hr)
-- GA4 custom events: `signup_click` (on every `app.geniussheets.com` link), `pricing_view` (scroll depth on pricing section), `cheatsheet_download`, `contact_submit` (already firing).
-- Tag outbound links to `app.geniussheets.com` with UTM params so signups can be attributed back to source pages.
-- Add PostHog feature flags later if testing pricing/copy variants.
+### 2. Conversion tracking polish — DONE
+Shipped in `assets/js/main.js`: `signup_click`, `login_click`, `demo_click`, `pricing_view`, `video_play`, `faq_open`, `contact_submit`, all fanned out to GA4 and PostHog. Outbound `app.geniussheets.com` links are auto-tagged with UTM params (`utm_campaign` = page, `utm_content` = CTA location), so signups attribute back to the exact button that produced them.
+
+Still open:
+- `cheatsheet_download` event, once the lead magnet in item 1 exists.
+- Verify events land in both GA4 and PostHog after deploy, then build a funnel: `pricing_view` → `signup_click` → signup.
+- PostHog feature flags for copy/pricing A/B tests. First test worth running: hero CTA "Start Free Trial" vs "Start For Free" vs "Start 14-Day Free Trial".
 
 ### 3. Blog (`_posts/`) — biggest organic lever
 Jekyll handles `/blog/` natively. Restore the commented blog-preview block in `index.html` once 3+ posts exist.

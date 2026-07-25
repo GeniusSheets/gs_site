@@ -31,7 +31,8 @@
     }
 
     .faq-answer {
-      max-height: 200px;
+      // Generous ceiling: the longer answers clipped at 200px on mobile.
+      max-height: 600px;
       padding: 0 24px 20px;
     }
   }

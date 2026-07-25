@@ -9,6 +9,7 @@ description: "Simple pricing for live financial reporting, from a single entity 
   <div class="container">
     <h1>One Entity or Thirty, Priced for Both</h1>
     <p class="page-subtitle">Every plan includes live QuickBooks Online and Xero data in Excel and Google Sheets. Firm plans add unlimited entities and consolidated reporting.</p>
+    <p class="cta-reassurance">Two-week free trial on every plan. No credit card required.</p>
   </div>
 </section>
 
@@ -25,7 +26,7 @@ description: "Simple pricing for live financial reporting, from a single entity 
           <span class="price-period">/month</span>
         </div>
         <p class="price-note">$10/mo for additional users</p>
-        <a href="https://app.geniussheets.com" class="btn btn-outline btn-block">Get Started</a>
+        <a href="{{ site.app_url }}/signup" class="btn btn-outline btn-block" data-cta="signup" data-cta-location="pricing_starter">Start Free Trial</a>
         <ul class="pricing-features">
           <li>Live Data Connection</li>
           <li>20 Queries per month</li>
@@ -43,7 +44,7 @@ description: "Simple pricing for live financial reporting, from a single entity 
           <span class="price-period">/month</span>
         </div>
         <p class="price-note">$10/mo for additional users</p>
-        <a href="https://app.geniussheets.com" class="btn btn-outline btn-block">Get Started</a>
+        <a href="{{ site.app_url }}/signup" class="btn btn-outline btn-block" data-cta="signup" data-cta-location="pricing_business">Start Free Trial</a>
         <ul class="pricing-features">
           <li>Live Data Connection</li>
           <li>Unlimited Monthly Queries</li>
@@ -61,7 +62,7 @@ description: "Simple pricing for live financial reporting, from a single entity 
           <span class="price-amount price-amount--text">Contact Us</span>
         </div>
         <p class="price-note">Custom pricing based on entities and seats</p>
-        <a href="{{ '/contact' | relative_url }}" class="btn btn-primary btn-block">Book a Demo</a>
+        <a href="{{ '/contact' | relative_url }}" class="btn btn-primary btn-block" data-cta="demo" data-cta-location="pricing_firm">Book a Demo</a>
         <ul class="pricing-features">
           <li>All Your QuickBooks &amp; Xero Entities</li>
           <li>Consolidated Multi-Entity Reporting</li>
@@ -72,6 +73,7 @@ description: "Simple pricing for live financial reporting, from a single entity 
         </ul>
       </div>
     </div>
+    <p class="pricing-reassurance">Not sure which plan fits? <a href="{{ '/contact' | relative_url }}" data-cta="contact" data-cta-location="pricing_help">Tell us how many entities you manage</a> and we'll point you to the right one.</p>
   </div>
 </section>
 
@@ -135,5 +137,18 @@ description: "Simple pricing for live financial reporting, from a single entity 
         </div>
       </div>
     </div>
+  </div>
+</section>
+
+<!-- Closing CTA -->
+<section class="final-cta">
+  <div class="container">
+    <h2>Try It on Your Own Books</h2>
+    <p>Connect an entity and pull a live report in minutes. Nothing to install on your server, nothing to migrate.</p>
+    <div class="final-cta-buttons">
+      <a href="{{ site.app_url }}/signup" class="btn btn-accent btn-lg" data-cta="signup" data-cta-location="final_cta">Start Free Trial</a>
+      <a href="{{ '/contact' | relative_url }}" class="btn btn-ghost btn-lg" data-cta="demo" data-cta-location="final_cta">Book a Demo</a>
+    </div>
+    <p class="cta-reassurance">Two weeks free. No credit card required. Cancel anytime.</p>
   </div>
 </section>

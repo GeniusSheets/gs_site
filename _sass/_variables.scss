@@ -5,7 +5,10 @@ $primary-light: #c9f269;
 $secondary: #0c1100;
 $text: #0c1100;
 $text-light: #4b5852;
-$text-muted: #c1cac8;
+// Supporting text (price notes, social proof, captions). Was #c1cac8, which
+// read at 1.67:1 on white and was effectively invisible; this clears WCAG AA
+// on white, $bg-light, and $bg-alt.
+$text-muted: #626e6a;
 $bg: #ffffff;
 $bg-light: #f0f5f4;
 $bg-alt: #fcfff5;

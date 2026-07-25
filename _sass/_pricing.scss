@@ -130,10 +130,23 @@
   color: $text-light;
   font-size: 0.875rem;
   margin-bottom: 24px;
+
+  // Reserve two lines so the price and CTA rows line up across all three
+  // cards, whatever the length of each description.
+  @media (min-width: 769px) {
+    min-height: 45px;
+  }
 }
 
 .price {
   margin-bottom: 8px;
+  display: flex;
+  align-items: baseline;
+  gap: 4px;
+
+  @media (min-width: 769px) {
+    min-height: 72px;
+  }
 }
 
 .price-amount {
@@ -143,6 +156,12 @@
 
   &.price-amount--text {
     font-size: 1.75rem;
+
+    // Settle the text-only price ("Contact Us") into the taller numeric
+    // price row instead of floating at the top of it.
+    @media (min-width: 769px) {
+      padding-top: 16px;
+    }
   }
 }
 
@@ -156,6 +175,13 @@
   font-size: 0.8125rem;
   color: $text-muted;
   margin-bottom: 24px;
+}
+
+.pricing-reassurance {
+  text-align: center;
+  margin-top: 40px;
+  font-size: 0.9375rem;
+  color: $text-light;
 }
 
 .pricing-features {

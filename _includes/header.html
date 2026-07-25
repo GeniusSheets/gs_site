@@ -4,7 +4,7 @@
       <a href="{{ '/' | relative_url }}" class="logo">
         <img src="{{ '/assets/images/logos/logo-nav.png' | relative_url }}" alt="Genius Sheets" class="nav-logo">
       </a>
-      <button class="nav-toggle" aria-label="Toggle navigation">
+      <button class="nav-toggle" aria-label="Toggle navigation" aria-expanded="false">
         <span class="hamburger"></span>
       </button>
       <ul class="nav-links">
@@ -14,8 +14,8 @@
         <li><a href="{{ '/services' | relative_url }}" {% if page.url == '/services' or page.url == '/services/' %}class="active"{% endif %}>Services</a></li>
       </ul>
       <div class="nav-cta">
-        <a href="https://app.geniussheets.com" class="btn btn-outline">Log In</a>
-        <a href="https://app.geniussheets.com" class="btn btn-primary">Get Started</a>
+        <a href="{{ site.app_url }}" class="btn btn-text" data-cta="login" data-cta-location="nav">Log In</a>
+        <a href="{{ site.app_url }}/signup" class="btn btn-primary" data-cta="signup" data-cta-location="nav">Start Free Trial</a>
       </div>
     </div>
   </nav>

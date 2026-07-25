@@ -42,7 +42,7 @@
   .hero-announce-badge {
     display: inline-block;
     background: $primary;
-    color: $secondary;
+    color: white;
     font-size: 0.75rem;
     font-weight: 700;
     text-transform: uppercase;
@@ -94,9 +94,20 @@
 }
 
 .hero-video {
+  // Deliberately left in source order on mobile: the screenshot is unreadable
+  // at 390px wide, and leading with it pushed the headline and CTA off the
+  // first screen.
   @media (max-width: 768px) {
-    order: -1;
+    margin-top: 8px;
   }
+}
+
+.hero-video-caption {
+  text-align: center;
+  margin-top: 12px;
+  font-size: 0.875rem;
+  font-weight: 500;
+  color: $text-light;
 }
 
 .hero-lightbox {
@@ -505,15 +516,22 @@
   padding: 48px 0;
   background: $bg;
   text-align: center;
+
+  .stars {
+    color: $star;
+    font-size: 1.5rem;
+    letter-spacing: 3px;
+    margin-bottom: 8px;
+  }
 }
 
 .rating-text {
-  font-size: 1.5rem;
+  font-size: 1.25rem;
   color: $text-light;
 
   strong {
     color: $primary;
-    font-size: 1.75rem;
+    font-size: 1.5rem;
   }
 }
 

@@ -129,4 +129,16 @@
     margin-bottom: 32px;
     font-size: 1.125rem;
   }
+
+  .cta-reassurance {
+    font-size: 0.875rem;
+    margin-bottom: 0;
+  }
+}
+
+.quickstart-cta-buttons {
+  display: flex;
+  gap: 16px;
+  justify-content: center;
+  flex-wrap: wrap;
 }

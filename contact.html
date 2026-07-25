@@ -1,20 +1,37 @@
 ---
 layout: default
 title: "Contact Us"
-description: "Get in touch with Genius Sheets. We respond within 24 hours."
+description: "Book a 30-minute demo with Genius Sheets, or send us a note. We respond within 24 hours."
+hide_sticky_cta: true
 ---
 
 <!-- Contact Hero -->
 <section class="page-hero">
   <div class="container">
-    <h1>Contact Us</h1>
-    <p class="page-subtitle">We'd love to hear from you. Reach out and we'll respond within 24 hours.</p>
+    <h1>Book a Demo</h1>
+    <p class="page-subtitle">Pick a time below and we'll walk through your entities, your report formats, and what the buildout looks like. No slide deck, no sales pressure.</p>
   </div>
 </section>
 
-<!-- Contact Section -->
+<!-- Calendly (primary action) -->
+<section class="calendly-section">
+  <div class="container">
+    <ul class="demo-expectations">
+      <li>30 minutes, screen shared, your books if you want</li>
+      <li>We map your entity list to a plan and a price</li>
+      <li>You leave knowing whether this fits, either way</li>
+    </ul>
+    <link href="https://assets.calendly.com/assets/external/widget.css" rel="stylesheet">
+    <script src="https://assets.calendly.com/assets/external/widget.js" type="text/javascript" async></script>
+    <div class="calendly-inline-widget" data-url="https://calendly.com/joe-geniussheets/30min" style="min-width:320px;height:700px;"></div>
+  </div>
+</section>
+
+<!-- Contact Section (secondary path) -->
 <section class="contact-section">
   <div class="container">
+    <h2 class="section-title">Prefer to Send a Note?</h2>
+    <p class="section-subtitle">Tell us what you're working on and we'll reply within one business day.</p>
     {% if site.formspree_id and site.formspree_id != "" %}
     <form class="contact-form" id="contact-form" action="https://formspree.io/f/{{ site.formspree_id }}" method="POST">
       <div class="form-row">
@@ -28,21 +45,35 @@ description: "Get in touch with Genius Sheets. We respond within 24 hours."
         </div>
       </div>
       <div class="form-group">
-        <label for="email">Email</label>
+        <label for="email">Work Email</label>
         <input type="email" id="email" name="email" required>
       </div>
-      <div class="form-group">
-        <label for="phone">Phone</label>
-        <input type="tel" id="phone" name="phone">
+      <div class="form-row">
+        <div class="form-group">
+          <label for="company">Company <span class="form-optional">(optional)</span></label>
+          <input type="text" id="company" name="company">
+        </div>
+        <div class="form-group">
+          <label for="entities">Entities You Manage <span class="form-optional">(optional)</span></label>
+          <select id="entities" name="entities">
+            <option value="">Select one</option>
+            <option value="1">1</option>
+            <option value="2-5">2 to 5</option>
+            <option value="6-15">6 to 15</option>
+            <option value="16-30">16 to 30</option>
+            <option value="30+">More than 30</option>
+          </select>
+        </div>
       </div>
       <div class="form-group">
-        <label for="message">Message</label>
-        <textarea id="message" name="message" rows="5" required></textarea>
+        <label for="message">What are you trying to build? <span class="form-optional">(optional)</span></label>
+        <textarea id="message" name="message" rows="4" placeholder="Consolidated P&amp;L across 12 entities, partner capital schedules, lender package..."></textarea>
       </div>
       <input type="text" name="_gotcha" tabindex="-1" autocomplete="off" style="position:absolute;left:-9999px;">
       <input type="hidden" name="_subject" value="New contact form submission: geniussheets.us">
       <button type="submit" class="btn btn-primary btn-block">Send Message</button>
       <p class="form-status" id="contact-form-status" role="status" aria-live="polite"></p>
+      <p class="form-note">A real person reads every message. We never share your details.</p>
     </form>
     {% else %}
     <div class="contact-form-fallback">
@@ -53,21 +84,20 @@ description: "Get in touch with Genius Sheets. We respond within 24 hours."
   </div>
 </section>
 
+<!-- Self-serve alternative -->
+<section class="contact-alt-cta">
+  <div class="container">
+    <h2>Rather Just Try It?</h2>
+    <p>Starter and Business plans are self-serve. Connect an entity and pull a live report without talking to anyone.</p>
+    <a href="{{ site.app_url }}/signup" class="btn btn-primary btn-lg" data-cta="signup" data-cta-location="contact_self_serve">Start Free Trial</a>
+    <p class="cta-reassurance">Two weeks free. No credit card required.</p>
+  </div>
+</section>
+
 <!-- Referral -->
 <section class="referral-section">
   <div class="container">
     <h2 class="section-title">Know a Multi-Entity Team?</h2>
     <p class="section-subtitle">If you know a team running books across several entities (family offices, holdcos, PE-backed groups, or fractional CFO firms), we pay a 15% referral fee on their first year once they become a paying customer. A quick intro is all it takes, and you can take account credit instead if you prefer. See the <a href="{{ '/referrals' | relative_url }}">referral program</a> for details, or email <a href="mailto:{{ site.email }}">{{ site.email }}</a>.</p>
-  </div>
-</section>
-
-<!-- Calendly -->
-<section class="calendly-section">
-  <div class="container">
-    <h2 class="section-title">Schedule a Meeting</h2>
-    <p class="section-subtitle">Book a free 30-minute call to see how Genius Sheets can work for you.</p>
-    <link href="https://assets.calendly.com/assets/external/widget.css" rel="stylesheet">
-    <script src="https://assets.calendly.com/assets/external/widget.js" type="text/javascript" async></script>
-    <div class="calendly-inline-widget" data-url="https://calendly.com/joe-geniussheets/30min" style="min-width:320px;height:700px;"></div>
   </div>
 </section>

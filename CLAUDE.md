@@ -29,7 +29,13 @@ bundle exec jekyll clean                # Remove generated files
 
 **SCSS structure:** `assets/css/main.scss` imports all partials from `_sass/`. Each partial maps to a page or component (`_home.scss`, `_pricing.scss`, etc.). Shared design tokens live in `_sass/_variables.scss` (colors, spacing, breakpoints). Breakpoints: 768px (tablet), 480px (mobile).
 
-**JavaScript:** `assets/js/main.js` handles mobile nav toggle, FAQ accordion, and pricing monthly/yearly toggle. All vanilla DOM manipulation.
+**JavaScript:** `assets/js/main.js` handles mobile nav toggle, FAQ accordion, the contact form AJAX submit, the video lightbox, the sticky mobile CTA, and conversion instrumentation. All vanilla DOM manipulation.
+
+**Conversion instrumentation:** every outbound link to `app.geniussheets.com` is auto-tagged with UTM params (`utm_campaign` = page slug, `utm_content` = `data-cta-location`) and fires a `signup_click` event to both GA4 and PostHog. Mark CTAs with `data-cta="signup|login|demo|contact"` and `data-cta-location="<where on the page>"` so new buttons are tracked without touching JS. Events emitted: `signup_click`, `login_click`, `demo_click`, `pricing_view`, `video_play`, `faq_open`, `contact_submit`.
+
+**Video links:** add `data-video="<embed url>"` and `data-video-title` to open in the on-page lightbox instead of sending visitors off site. Keep the `href` as a fallback for no-JS.
+
+**Sticky CTA:** `_includes/sticky-cta.html` renders on every page below 768px. Set `hide_sticky_cta: true` in a page's front matter to suppress it (used on `contact.html`, where the page is already the conversion target).
 
 **Site config:** `_config.yml` holds site title, description, social links, and Sass settings. Changes to `_config.yml` require restarting the dev server.
 

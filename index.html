@@ -1,6 +1,8 @@
 ---
 layout: default
 title: "Custom Excel Reporting for Multi-Entity Finance Teams"
+description: "Genius Sheets pulls live QuickBooks Online and Xero financials into Excel and Google Sheets. Consolidate every entity in one workbook, refreshed daily, with drill-down to the transaction."
+image: /assets/images/hero/hero-screenshot.png
 ---
 
 <!-- Hero Section -->
@@ -278,7 +280,7 @@ title: "Custom Excel Reporting for Multi-Entity Finance Teams"
       </div>
       <div class="pricing-card featured">
         <div class="popular-badge">Multi-Entity Teams</div>
-        <h3>Firm</h3>
+        <h3>Enterprise</h3>
         <p class="pricing-description">Family offices, holdcos &amp; firms managing many entities</p>
         <div class="price">
           <span class="price-amount price-amount--text">Contact Us</span>
@@ -309,7 +311,7 @@ title: "Custom Excel Reporting for Multi-Entity Finance Teams"
           <span class="faq-icon">+</span>
         </button>
         <div class="faq-answer">
-          <p>As many as you manage. Firm plans connect every QuickBooks Online and Xero file under one login, and you can mix the two freely.</p>
+          <p>As many as you manage. Enterprise plans connect every QuickBooks Online and Xero file under one login, and you can mix the two freely.</p>
         </div>
       </div>
       <div class="faq-item">
@@ -348,6 +350,46 @@ title: "Custom Excel Reporting for Multi-Entity Finance Teams"
           <p>Connect QuickBooks or Xero from your dashboard, install the Excel or Google Sheets add-in, and start pulling live data. See the <a href="{{ '/quickstart' | relative_url }}">quickstart guide</a> for a walkthrough.</p>
         </div>
       </div>
+      <div class="faq-item">
+        <button class="faq-question">
+          Why does Google Sheets keep asking me to authorize?
+          <span class="faq-icon">+</span>
+        </button>
+        <div class="faq-answer">
+          <p>Almost always because more than one Google account is signed into the same browser. The permission pop-up gets approved under a different account than the one your spreadsheet is open in, so the approval never takes and the prompt returns. Open the workbook in an Incognito window signed in with only your Genius Sheets account to confirm, then give that account its own Chrome profile. Full steps are in the <a href="{{ site.app_url }}/faq#google-sheets-auth">Google Sheets authorization guide</a>.</p>
+        </div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-question">
+          Why are my formulas returning blank or zero?
+          <span class="faq-icon">+</span>
+        </button>
+        <div class="faq-answer">
+          <p>A blank or zero means the formula ran but found no account matching that name. The usual causes are a company with account numbers enabled in QuickBooks (accounts come through as <code>4100 Food Sales</code>, not <code>Food Sales</code>), or a workbook built for a different entity with a different chart of accounts. Use <strong>List Categories</strong> to copy the exact names for the company you have selected &mdash; see the <a href="{{ site.app_url }}/faq#blank-or-zero">full explanation</a>.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Multi-Entity Guides -->
+<section class="guide-related">
+  <div class="container">
+    <h2 class="section-title">Multi-Entity Consolidation Guides</h2>
+    <p class="section-subtitle">How teams keep one live workbook across every QuickBooks Online and Xero entity.</p>
+    <div class="related-grid">
+      <a href="{{ '/guides/quickbooks-online-multi-entity-consolidation-excel' | relative_url }}" class="related-card">
+        <h3>QuickBooks Online consolidation in Excel</h3>
+        <p>QBO is one company per subscription. Keep your Excel model live across every entity.</p>
+      </a>
+      <a href="{{ '/guides/xero-multi-organisation-reporting-excel' | relative_url }}" class="related-card">
+        <h3>Xero multi-organisation reporting</h3>
+        <p>Roll up multiple Xero organisations (and QBO) into the workbook you already use.</p>
+      </a>
+      <a href="{{ '/guides/family-office-holdco-reporting-quickbooks-xero' | relative_url }}" class="related-card">
+        <h3>Family office &amp; holdco reporting</h3>
+        <p>Keep the family book or group pack live across 10 to 50+ entities on QBO and Xero.</p>
+      </a>
     </div>
   </div>
 </section>

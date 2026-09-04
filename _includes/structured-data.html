@@ -5,6 +5,7 @@
   "name": "Genius Sheets",
   "url": "{{ site.url }}",
   "logo": "{{ site.url }}/assets/images/logos/logo-nav.png",
+  "email": "{{ site.email }}",
   "sameAs": [
     "{{ site.social_links.linkedin }}",
     "{{ site.social_links.twitter }}",
@@ -35,7 +36,8 @@
 }
 </script>
 {% endif %}
-{% if page.url == "/" or page.url == "/index.html" or page.url contains "/pricing" %}
+{% comment %} FAQPage markup must mirror the visible FAQ on each page (Google policy). {% endcomment %}
+{% if page.url == "/" or page.url == "/index.html" %}
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
@@ -43,18 +45,26 @@
   "mainEntity": [
     {
       "@type": "Question",
-      "name": "Does Genius Sheets offer a free trial?",
+      "name": "How many entities can I connect?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "Yes. You can sign up with no credit card down for a two-week free trial. To upgrade, contact us at info@geniussheets.us."
+        "text": "As many as you manage. Enterprise plans connect every QuickBooks Online and Xero file under one login, and you can mix the two freely."
       }
     },
     {
       "@type": "Question",
-      "name": "Do you offer team plans?",
+      "name": "Does Genius Sheets offer a free trial?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "Yes, for larger teams and organizations we offer customized enterprise plans. Contact info@geniussheets.us to learn more."
+        "text": "Yes, a two-week free trial with up to 2 connections, no credit card required. Upgrade anytime from your account."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Do you support Xero?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes. Connect Xero organizations the same way you would a QBO file, on every plan."
       }
     },
     {
@@ -62,7 +72,7 @@
       "name": "What is your cancellation policy?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "You can cancel a monthly subscription at any time. Simply send an email to info@geniussheets.us."
+        "text": "Cancel anytime. Manage your plan from your account, or email info@geniussheets.us."
       }
     },
     {
@@ -70,8 +80,134 @@
       "name": "How do I get started?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "Connect your account to QuickBooks or Xero on the dashboard page of the website, then download either the Google Sheets or Excel add-in."
+        "text": "Connect QuickBooks or Xero from your dashboard, install the Excel or Google Sheets add-in, and start pulling live data. See the quickstart guide for a walkthrough."
       }
+    },
+    {
+      "@type": "Question",
+      "name": "Why does Google Sheets keep asking me to authorize?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Almost always because more than one Google account is signed into the same browser. The permission pop-up gets approved under a different account than the one your spreadsheet is open in, so the approval never takes and the prompt returns. Open the workbook in an Incognito window signed in with only your Genius Sheets account to confirm, then give that account its own Chrome profile."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Why are my formulas returning blank or zero?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "A blank or zero means the formula ran but found no account matching that name. The usual causes are a company with account numbers enabled in QuickBooks (accounts come through as 4100 Food Sales, not Food Sales), or a workbook built for a different entity with a different chart of accounts. Use List Categories to copy the exact names for the company you have selected."
+      }
+    }
+  ]
+}
+</script>
+{% endif %}
+{% if page.url contains "/pricing" %}
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "How does Enterprise plan pricing work?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Enterprise plans are priced on the number of entities and seats you need. Connect every QuickBooks Online and Xero file you manage (operating companies, properties, funds, or clients) under one login, with consolidated reporting across all of them. Book a demo for a quote."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What's included in custom services?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Custom ERP, reporting, and data warehousing on QuickBooks and Xero: partner schedules, consolidations, modeled data layers, and integrations. Scoped per engagement; see Services for detail."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Does Genius Sheets offer a free trial?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes, a two-week free trial with up to 2 connections, no credit card required. Upgrade anytime from your account."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Do you support Xero?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes, every plan includes Xero on the same terms as QuickBooks Online, and you can mix the two."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Do you offer a referral fee?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes. If you know a team running books across several entities (family offices, holdcos, PE-backed groups, or fractional CFO firms), we pay a 15% referral fee on their first year once they become a paying customer. A quick intro is all it takes. Prefer credit instead? We can apply it to your own account. See the referral program for details, or email info@geniussheets.us."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What is your cancellation policy?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Cancel anytime. Manage your plan from your account, or email info@geniussheets.us."
+      }
+    }
+  ]
+}
+</script>
+{% endif %}
+{% if page.url contains "/guides/" %}
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Article",
+  "headline": {{ page.title | jsonify }},
+  "description": {{ page.description | jsonify }},
+  "author": {
+    "@type": "Organization",
+    "name": "Genius Sheets"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "Genius Sheets",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "{{ site.url }}/assets/images/logos/logo-nav.png"
+    }
+  },
+  "mainEntityOfPage": {
+    "@type": "WebPage",
+    "@id": "{{ page.url | absolute_url }}"
+  }
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "Home",
+      "item": "{{ '/' | absolute_url }}"
+    },
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "Guides",
+      "item": "{{ '/guides/' | absolute_url }}"
+    },
+    {
+      "@type": "ListItem",
+      "position": 3,
+      "name": {{ page.title | jsonify }},
+      "item": "{{ page.url | absolute_url }}"
     }
   ]
 }

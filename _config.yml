@@ -22,6 +22,9 @@ formspree_id: "mnjweoyr"
 # jekyll-seo-tag defaults
 author: Genius Sheets
 logo: /assets/images/logos/logo-nav.png
+# Default social-share image. jekyll-seo-tag reads image per-page (front matter),
+# not from here, so each page sets its own `image:`; keep this as the canonical default.
+image: /assets/images/hero/hero-screenshot.png
 twitter:
   username: geniussheetsdev
   card: summary_large_image

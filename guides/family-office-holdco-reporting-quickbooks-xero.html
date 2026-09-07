@@ -4,7 +4,29 @@ permalink: /guides/family-office-holdco-reporting-quickbooks-xero/
 title: "Family Office & Holdco Reporting on QuickBooks and Xero"
 description: "Family offices and holdcos run 10 to 50+ entities on QBO and Xero. Keep the family book or group pack live in Excel, custom, not canned."
 image: /assets/images/hero/hero-screenshot.png
+faq:
+  - q: "Why not just migrate a family office to NetSuite or Sage Intacct?"
+    a: "If you need native ERP consolidation and can absorb a year-long, six-figure migration, that may be the right path. Many family offices and holdcos do not: QuickBooks Online and Xero are still the right ledgers, and the real gap is a consolidated family or group pack in a custom format. Connecting the books you already keep is faster and cheaper than replacing them."
+  - q: "Can Genius Sheets handle partner capital schedules and management fees?"
+    a: "Yes. Those are exactly the workflows the ledger will never run natively. Because your formulas live in your own workbook, partner capital schedules, management-fee calculations, property rollups, and lender packages recalculate against live books instead of being rebuilt from exports each month."
+  - q: "How is this different from Fathom, Reach Reporting, or similar tools?"
+    a: "Canned reporting tools format your numbers into their templates. A family office or holdco usually needs a specific house format that no template ships. Genius Sheets keeps your exact workbook and connects it to every entity's books, so the output is your layout, refreshed daily, with drill-down."
+  - q: "Can it mix QuickBooks Online and Xero entities?"
+    a: "Yes. Operating companies, properties, funds, and trusts often sit on different products. Genius Sheets pulls QuickBooks Online and Xero into the same workbook under one login, so the consolidated picture spans the whole structure."
+  - q: "How many entities can one workbook cover?"
+    a: "Enterprise plans are built for portfolios of many entities, from roughly 10 up to 50 or more, connected under a single login. Adding an entity does not mean re-plumbing the workbook."
 ---
+
+<!-- Breadcrumb -->
+<nav class="guide-breadcrumb" aria-label="Breadcrumb">
+  <div class="container">
+    <ol>
+      <li><a href="{{ '/' | relative_url }}">Home</a></li>
+      <li><a href="{{ '/guides/' | relative_url }}">Guides</a></li>
+      <li><span>Family office &amp; holdco reporting</span></li>
+    </ol>
+  </div>
+</nav>
 
 <!-- Hero -->
 <section class="page-hero">
@@ -22,6 +44,9 @@ image: /assets/images/hero/hero-screenshot.png
 
       <p>The monthly job is not "run a P&amp;L." It is a consolidated family or group picture in a format no SaaS template ships out of the box. So the work lands on an analyst: export every file, stitch the rollup, eliminate what someone remembered to code as intercompany, and deliver a pack that is already aging when it hits the inbox.</p>
 
+      <h2>Why entity density breaks the reporting stack</h2>
+      <p>Each new entity is another file to export, another chart of accounts to reconcile against the family layout, and another place an intercompany line or a late adjustment can quietly throw the group number off. The pack is only as current as the last full rebuild, so the analyst spends the first week of every month reassembling last month instead of analysing it. The ledgers are fine. The disconnect between the ledgers and the workbook is the problem.</p>
+
       <h2>The wedge is custom, not canned</h2>
       <p>Canned reporting tools force the family or holdco into <em>their</em> templates. A full ERP migration is a year and six figures you may not need if QuickBooks Online and Xero are still the right ledgers.</p>
 
@@ -31,6 +56,9 @@ image: /assets/images/hero/hero-screenshot.png
         <p>Keep the ledger you have. Keep the workbook you built. Connect them, and let the consolidated pack recalculate when the books move.</p>
       </div>
 
+      <h2>Custom vs canned, honestly</h2>
+      <p>Template tools are genuinely good at fast, standardised dashboards for a single company. Where they struggle is a bespoke family or group format with partner schedules, fee waterfalls, and lender-specific packages that have to look a particular way. If your reporting has to match a format that already exists, the value is in preserving that format and making it live, not in re-teaching the family to read a new one.</p>
+
       <h2>Who this is for</h2>
       <ul>
         <li>Family offices and multi-family offices still on QuickBooks Online or Xero</li>
@@ -39,6 +67,23 @@ image: /assets/images/hero/hero-screenshot.png
       </ul>
 
       <p>If you are already on NetSuite or Sage Intacct with native consolidation, you are usually a different buyer. If you are living in Excel on top of many QuickBooks Online or Xero files, <a href="{{ '/contact' | relative_url }}">talk to us</a>.</p>
+    </div>
+  </div>
+</section>
+
+<!-- FAQ -->
+<section class="faq">
+  <div class="container">
+    <div class="guide-faq">
+      <h2>Frequently asked questions</h2>
+      <div class="faq-list">
+        {% for item in page.faq %}
+        <div class="faq-item">
+          <button class="faq-question">{{ item.q }}<span class="faq-icon">+</span></button>
+          <div class="faq-answer"><p>{{ item.a }}</p></div>
+        </div>
+        {% endfor %}
+      </div>
     </div>
   </div>
 </section>

@@ -1,6 +1,82 @@
 // Guides / long-form SEO pages
+
+// Breadcrumb (visible; pairs with BreadcrumbList JSON-LD)
+.guide-breadcrumb {
+  padding: 20px 0 0;
+
+  ol {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    align-items: center;
+    font-size: 0.875rem;
+    color: $text-light;
+  }
+
+  li {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+
+    &:not(:last-child)::after {
+      content: '›';
+      color: $text-muted;
+    }
+  }
+
+  a {
+    color: $text-light;
+    font-weight: 500;
+
+    &:hover { color: $primary; }
+  }
+
+  li:last-child span {
+    color: $text;
+    font-weight: 600;
+  }
+}
+
 .guide-body {
-  padding: 64px 0 80px;
+  padding: 40px 0 80px;
+}
+
+// Guides hub / index
+.guide-index {
+  padding: 56px 0 80px;
+
+  .related-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 24px;
+    max-width: 960px;
+    margin: 0 auto;
+
+    @media (max-width: 768px) {
+      grid-template-columns: 1fr;
+    }
+  }
+}
+
+// FAQ block inside a guide (reuses the global .faq accordion styles + JS)
+.guide-faq {
+  max-width: 760px;
+  margin: 0 auto;
+  padding-top: 8px;
+
+  h2 {
+    font-size: 1.75rem;
+    margin-bottom: 24px;
+  }
+
+  .faq-list {
+    max-width: none;
+  }
+
+  // Guide answers run longer than the global 200px cap; give them room.
+  .faq-item.active .faq-answer {
+    max-height: 600px;
+  }
 }
 
 .guide-content {

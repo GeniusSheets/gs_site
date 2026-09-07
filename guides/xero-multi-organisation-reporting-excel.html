@@ -4,7 +4,29 @@ permalink: /guides/xero-multi-organisation-reporting-excel/
 title: "Xero Multi-Organisation Consolidation in Excel & Sheets"
 description: "Xero reports each organisation separately. Roll up multiple Xero (and QBO) entities into your existing Excel or Google Sheets model, live, not exported."
 image: /assets/images/hero/hero-screenshot.png
+faq:
+  - q: "Does Xero consolidate multiple organisations?"
+    a: "Xero runs each organisation as its own set of books and does not ship a native consolidated view across organisations. Group, trust, and holdco reporting is built outside Xero, usually in Excel or Google Sheets, which is why multi-org teams rebuild the same pack every month."
+  - q: "Can I report across Xero and QuickBooks Online together?"
+    a: "Yes. Genius Sheets pulls both Xero organisations and QuickBooks Online files into the same workbook under one login, so a consolidated view does not care which ledger an entity sits on. That matters after an acquisition, when a group is rarely all on one product."
+  - q: "How do account names sync for formula matching?"
+    a: "Genius Sheets brings each organisation's account names through so your formulas can match on them. Reporting reads cleaner when charts of accounts are reasonably aligned across organisations, but you keep your existing Xero setup and map to your layout in the workbook."
+  - q: "Does the workbook refresh automatically when the ledgers change?"
+    a: "You refresh from the workbook and the formulas pull current figures from every connected organisation, daily. There is no export-and-paste step, so the pack is a recalculation of live books rather than a snapshot that ages the moment it is built."
+  - q: "Does this work in Google Sheets?"
+    a: "Yes. The same GS formulas work in both Excel and Google Sheets, so you can keep whichever your team already uses."
 ---
+
+<!-- Breadcrumb -->
+<nav class="guide-breadcrumb" aria-label="Breadcrumb">
+  <div class="container">
+    <ol>
+      <li><a href="{{ '/' | relative_url }}">Home</a></li>
+      <li><a href="{{ '/guides/' | relative_url }}">Guides</a></li>
+      <li><span>Xero multi-organisation reporting</span></li>
+    </ol>
+  </div>
+</nav>
 
 <!-- Hero -->
 <section class="page-hero">
@@ -30,6 +52,9 @@ image: /assets/images/hero/hero-screenshot.png
         <li>Drill-down when someone asks where a consolidated line came from</li>
       </ul>
 
+      <h2>Why per-org exports stop scaling</h2>
+      <p>With two or three organisations, the monthly export is tolerable. At ten or twenty it becomes the close. Every organisation adds another export to run in the right order, another set of accounts to reconcile against the group layout, and another place a rename or a late adjustment can throw the consolidated number off. The workbook is only as current as the last person to refresh every tab, and that person is doing it by hand.</p>
+
       <h2>Live Xero (and QBO) in the file you already use</h2>
       <p>Genius Sheets connects Xero organisations from the dashboard and pulls P&amp;L, balance sheet, and cash flow into Excel or Google Sheets with the same <strong>GS</strong> formulas used for QuickBooks Online. Account names sync cleanly for formula matching. Daily refresh. One login across entities. Your layouts stay yours.</p>
 
@@ -39,6 +64,15 @@ image: /assets/images/hero/hero-screenshot.png
 
       <h2>Mixed groups, one model</h2>
       <p>Real groups are rarely on a single accounting product. An AU, US, or UK structure might run some entities on Xero and others on QuickBooks Online after an acquisition. Genius Sheets pulls both into the same workbook under one login, so the consolidated view does not care which ledger an entity sits on.</p>
+
+      <h2>What to look for in a multi-org approach</h2>
+      <ul>
+        <li>It reads each organisation's books directly, so a refresh recalculates instead of rebuilding</li>
+        <li>It keeps your board or family layout intact rather than imposing a template</li>
+        <li>It supports drill-down from any consolidated line to its source</li>
+        <li>It spans Xero and QuickBooks Online, so a mixed group stays in one model</li>
+        <li>It absorbs a new organisation without re-plumbing the workbook</li>
+      </ul>
     </div>
   </div>
 </section>
@@ -49,6 +83,23 @@ image: /assets/images/hero/hero-screenshot.png
     <div class="guide-content">
       <h2>Built for multi-org finance teams</h2>
       <p>Groups, trusts, holdcos, and advisory firms managing many Xero organisations, often alongside a few QuickBooks Online files. If the monthly pack is rebuilt by hand from per-org exports, connect the ledgers instead.</p>
+    </div>
+  </div>
+</section>
+
+<!-- FAQ -->
+<section class="faq">
+  <div class="container">
+    <div class="guide-faq">
+      <h2>Frequently asked questions</h2>
+      <div class="faq-list">
+        {% for item in page.faq %}
+        <div class="faq-item">
+          <button class="faq-question">{{ item.q }}<span class="faq-icon">+</span></button>
+          <div class="faq-answer"><p>{{ item.a }}</p></div>
+        </div>
+        {% endfor %}
+      </div>
     </div>
   </div>
 </section>

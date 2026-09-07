@@ -4,7 +4,29 @@ permalink: /guides/quickbooks-online-multi-entity-consolidation-excel/
 title: "QuickBooks Online Multi-Entity Consolidation in Excel"
 description: "QBO doesn't consolidate company files natively. Keep your Excel workbook live across every entity, with no monthly export cycle."
 image: /assets/images/hero/hero-screenshot.png
+faq:
+  - q: "Can QuickBooks Online consolidate multiple companies?"
+    a: "Not natively. Each QuickBooks Online subscription is one company file with its own books, and there is no built-in consolidated P&L, balance sheet, or cash flow across separate company files. Any group or combined view is built outside QBO, which is why almost every multi-entity team ends up doing it in Excel."
+  - q: "What is the difference between Genius Sheets and QBO Advanced or Spreadsheet Sync?"
+    a: "Spreadsheet Sync and QBO Advanced multi-company tools are oriented around pulling combined exports into a workbook. Genius Sheets connects every entity's books to formulas in your own permanent workbook, so your house format (partner schedules, management fees, lender packs) recalculates when the books move, rather than being rebuilt around a fresh export each month."
+  - q: "How many QuickBooks entities can I connect?"
+    a: "Every QuickBooks Online file you manage, under one login. Enterprise plans are built for teams running many entities, and you can mix QuickBooks Online and Xero entities in the same workbook."
+  - q: "Do I have to change my chart of accounts to consolidate?"
+    a: "No. Genius Sheets pulls each entity's accounts as they are. Consolidation still reads cleaner when charts of accounts are reasonably aligned across entities, but you keep your existing books and map to your reporting layout in the workbook."
+  - q: "Does it work in Google Sheets as well as Excel?"
+    a: "Yes. The same GS formulas work in both Excel and Google Sheets, so you can keep whichever your team already uses."
 ---
+
+<!-- Breadcrumb -->
+<nav class="guide-breadcrumb" aria-label="Breadcrumb">
+  <div class="container">
+    <ol>
+      <li><a href="{{ '/' | relative_url }}">Home</a></li>
+      <li><a href="{{ '/guides/' | relative_url }}">Guides</a></li>
+      <li><span>QuickBooks Online consolidation</span></li>
+    </ol>
+  </div>
+</nav>
 
 <!-- Hero -->
 <section class="page-hero">
@@ -32,7 +54,11 @@ image: /assets/images/hero/hero-screenshot.png
         <li>A "live" workbook that was live on the day it was pasted</li>
       </ul>
 
-      <p>Even QBO Advanced multi-company tools that land data in Excel are still oriented around combined exports, not <em>your</em> permanent house format with partner schedules, management fees, or lender packs that recalculate when the books move.</p>
+      <h2>Why the spreadsheet workaround keeps breaking</h2>
+      <p>The export-and-paste model fails in predictable ways. A new entity is added and the master workbook does not know about it until someone wires it in by hand. An account is renamed in one company, so a formula that matched on text quietly returns the wrong number. A month closes late, and the "current" pack is built on data that changed after it was pasted. None of these are Excel's fault. They happen because the workbook is disconnected from the ledgers, so every refresh is a manual rebuild instead of a recalculation.</p>
+
+      <h2>QBO Advanced and Spreadsheet Sync are close, but not your model</h2>
+      <p>Even QuickBooks Online Advanced multi-company tools that land data in Excel are still oriented around combined exports. They can get numbers into a sheet, but the shape of that output is theirs, not <em>your</em> permanent house format with partner schedules, management fees, or lender packs that recalculate when the books move. You end up rebuilding your model around their export every period.</p>
 
       <h2>Keep the workbook. Connect the books.</h2>
       <p>Genius Sheets sits above QuickBooks Online (and Xero). Simple formulas (<strong>GS.IS</strong>, <strong>GS.BS</strong>, <strong>GS.CF</strong>) pull live financials into any cell of the Excel or Google Sheets file you already own. Your formats stay yours. Refresh daily. Drill from a consolidated number down to the transaction. Connect every QBO file under one login.</p>
@@ -48,6 +74,15 @@ image: /assets/images/hero/hero-screenshot.png
         <li>Drill-down from any consolidated line back to the source transaction</li>
         <li>Every QuickBooks Online entity connected under a single login</li>
       </ul>
+
+      <h2>What to look for in a consolidation approach</h2>
+      <ul>
+        <li>It reads your entities' books directly, so a refresh is a recalculation, not a rebuild</li>
+        <li>It leaves your layout alone, so partner schedules and lender packs stay in your format</li>
+        <li>It supports drill-down, so a reviewer can trace any consolidated number to its source</li>
+        <li>It handles new entities without re-plumbing the whole workbook</li>
+        <li>It works across both QuickBooks Online and Xero, because real groups are rarely on one product</li>
+      </ul>
     </div>
   </div>
 </section>
@@ -58,6 +93,23 @@ image: /assets/images/hero/hero-screenshot.png
     <div class="guide-content">
       <h2>Built for multi-entity finance teams</h2>
       <p>Family offices, holdcos, PE roll-ups, and fractional CFO or accounting firms running many QuickBooks Online entities, not single-file shops. If you are managing 5 to 30 or more entities and living in Excel on top of them, this is the job we built for.</p>
+    </div>
+  </div>
+</section>
+
+<!-- FAQ -->
+<section class="faq">
+  <div class="container">
+    <div class="guide-faq">
+      <h2>Frequently asked questions</h2>
+      <div class="faq-list">
+        {% for item in page.faq %}
+        <div class="faq-item">
+          <button class="faq-question">{{ item.q }}<span class="faq-icon">+</span></button>
+          <div class="faq-answer"><p>{{ item.a }}</p></div>
+        </div>
+        {% endfor %}
+      </div>
     </div>
   </div>
 </section>

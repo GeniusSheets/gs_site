@@ -221,3 +221,24 @@
 }
 </script>
 {% endif %}
+{% comment %} Front-matter-driven FAQPage: pages that define a `faq:` list render both the
+visible accordion and this JSON-LD from the same source, so they can never drift. {% endcomment %}
+{% if page.faq %}
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {% for item in page.faq %}{
+      "@type": "Question",
+      "name": {{ item.q | jsonify }},
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": {{ item.a | jsonify }}
+      }
+    }{% unless forloop.last %},{% endunless %}
+    {% endfor %}
+  ]
+}
+</script>
+{% endif %}

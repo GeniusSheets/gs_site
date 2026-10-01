@@ -10,6 +10,11 @@ Missing something or want detail on a specific release? Email info@geniussheets.
 
 ### September 2026
 
+#### Alerts: daily checks on your books (beta)
+Platforms: Web dashboard
+
+Genius Sheets now checks each connected company's books every day and flags what needs attention on the new Alerts page. Included alerts cover a cash balance dropping below a floor, a bank account going overdrawn, a month closing at a net loss, and a QuickBooks or Xero connection that needs reconnecting. Pick a company to see its alerts, and turn individual alerts on or off for your team. Pro alerts, in beta for invited teams, add cash runway, expense spikes, unusually large transactions, margin drops, receivables growing faster than revenue, and budget variance, plus your own thresholds for every alert.
+
 #### Budget vs Actual report
 Platforms: Excel
 

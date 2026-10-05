@@ -8,6 +8,13 @@ Missing something or want detail on a specific release? Email info@geniussheets.
 
 ## 2026
 
+### October 2026
+
+#### Budget vs Actual report in Google Sheets
+Platforms: Google Sheets
+
+The Budget vs Actual report is now available in the Google Sheets add-in. Choose a company and one of your QuickBooks budgets, and the report lays out Actual, Budget, and variance for every account, either for the whole period or month by month with a year-to-date summary. The date range defaults to the year to date through the last closed month, and the report option only appears for companies that have a budget in QuickBooks.
+
 ### September 2026
 
 #### Alerts: daily checks on your books (beta)

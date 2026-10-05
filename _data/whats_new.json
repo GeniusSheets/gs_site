@@ -6,6 +6,19 @@
       "year": 2026,
       "months": [
         {
+          "month": "October 2026",
+          "id": "october-2026",
+          "items": [
+            {
+              "title": "Budget vs Actual report in Google Sheets",
+              "platforms": [
+                "Google Sheets"
+              ],
+              "body_html": "<p>The Budget vs Actual report is now available in the Google Sheets add-in. Choose a company and one of your QuickBooks budgets, and the report lays out Actual, Budget, and variance for every account, either for the whole period or month by month with a year-to-date summary. The date range defaults to the year to date through the last closed month, and the report option only appears for companies that have a budget in QuickBooks.</p>"
+            }
+          ]
+        },
+        {
           "month": "September 2026",
           "id": "september-2026",
           "items": [

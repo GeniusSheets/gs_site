@@ -6,6 +6,26 @@
       "year": 2026,
       "months": [
         {
+          "month": "October 2026",
+          "id": "october-2026",
+          "items": [
+            {
+              "title": "Full alerts for every plan",
+              "platforms": [
+                "Web dashboard"
+              ],
+              "body_html": "<p>Full alerts are now available on every plan for $5/month per connection, and Alerts has its own link in the top navigation. On top of the Basic alerts included with every plan, Full alerts watch cash runway for each company and across all of them, expense spikes, unusually large expenses, gross margin drops, receivables growing faster than revenue, and variance against your QuickBooks budgets, with thresholds you can adjust to match how your business runs. Add or remove them anytime from your team's billing page, and the price follows your connection count. Enterprise plans include Full alerts.</p>"
+            },
+            {
+              "title": "Budget vs Actual report in Google Sheets",
+              "platforms": [
+                "Google Sheets"
+              ],
+              "body_html": "<p>The Budget vs Actual report is now available in the Google Sheets add-in. Choose a company and one of your QuickBooks budgets, and the report lays out Actual, Budget, and variance for every account, either for the whole period or month by month with a year-to-date summary. The date range defaults to the year to date through the last closed month, and the report option only appears for companies that have a budget in QuickBooks.</p>"
+            }
+          ]
+        },
+        {
           "month": "September 2026",
           "id": "september-2026",
           "items": [
@@ -14,7 +34,7 @@
               "platforms": [
                 "Web dashboard"
               ],
-              "body_html": "<p>Genius Sheets now checks each connected company's books every day and flags what needs attention on the new Alerts page. Basic alerts, included with every plan, cover a cash balance dropping below a floor, a bank account going overdrawn, a month closing at a net loss, and a QuickBooks or Xero connection that needs reconnecting. Pick a company to see its alerts, and turn individual alerts on or off for your team. Full alerts, in beta for invited teams, add cash runway, expense spikes, unusually large transactions, margin drops, receivables growing faster than revenue, and budget variance, plus your own thresholds for every alert.</p>"
+              "body_html": "<p>Genius Sheets now checks each connected company's books every day and flags what needs attention on the new Alerts page. Basic alerts, included with every plan, cover a cash balance dropping below a floor, a bank account going overdrawn, a month closing at a net loss, and a QuickBooks or Xero connection that needs reconnecting. Pick a company to see its alerts, and turn individual alerts on or off for your team. Full alerts add cash runway, expense spikes, unusually large transactions, margin drops, receivables growing faster than revenue, and budget variance, plus your own thresholds for every alert.</p>"
             },
             {
               "title": "Budget vs Actual report",

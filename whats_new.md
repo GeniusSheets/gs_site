@@ -10,6 +10,11 @@ Missing something or want detail on a specific release? Email info@geniussheets.
 
 ### October 2026
 
+#### Full alerts for every plan
+Platforms: Web dashboard
+
+Full alerts are now available on every plan for $5/month per connection, and Alerts has its own link in the top navigation. On top of the Basic alerts included with every plan, Full alerts watch cash runway for each company and across all of them, expense spikes, unusually large expenses, gross margin drops, receivables growing faster than revenue, and variance against your QuickBooks budgets, with thresholds you can adjust to match how your business runs. Add or remove them anytime from your team's billing page, and the price follows your connection count. Enterprise plans include Full alerts.
+
 #### Budget vs Actual report in Google Sheets
 Platforms: Google Sheets
 
@@ -20,7 +25,7 @@ The Budget vs Actual report is now available in the Google Sheets add-in. Choose
 #### Alerts: daily checks on your books (beta)
 Platforms: Web dashboard
 
-Genius Sheets now checks each connected company's books every day and flags what needs attention on the new Alerts page. Basic alerts, included with every plan, cover a cash balance dropping below a floor, a bank account going overdrawn, a month closing at a net loss, and a QuickBooks or Xero connection that needs reconnecting. Pick a company to see its alerts, and turn individual alerts on or off for your team. Full alerts, in beta for invited teams, add cash runway, expense spikes, unusually large transactions, margin drops, receivables growing faster than revenue, and budget variance, plus your own thresholds for every alert.
+Genius Sheets now checks each connected company's books every day and flags what needs attention on the new Alerts page. Basic alerts, included with every plan, cover a cash balance dropping below a floor, a bank account going overdrawn, a month closing at a net loss, and a QuickBooks or Xero connection that needs reconnecting. Pick a company to see its alerts, and turn individual alerts on or off for your team. Full alerts add cash runway, expense spikes, unusually large transactions, margin drops, receivables growing faster than revenue, and budget variance, plus your own thresholds for every alert.
 
 #### Budget vs Actual report
 Platforms: Excel

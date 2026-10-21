@@ -10,6 +10,11 @@ Missing something or want detail on a specific release? Email info@geniussheets.
 
 ### October 2026
 
+#### Date presets and clearer formula errors in Excel
+Platforms: Excel
+
+Reports now have one-click date ranges: YTD, Last month, Last quarter, Last year, and This month. The date range now starts at year to date through the last closed month, the range most people were already choosing by hand. When Genius Sheets formulas can't update, the add-in now says why: you're signed out, your session expired, your plan doesn't include filters, or your accounting data couldn't be reached. Where it helps, you can sign in again right from the message.
+
 #### Full alerts for every plan
 Platforms: Web dashboard
 

@@ -17,6 +17,14 @@
               "body_html": "<p>Reports now have one-click date ranges: YTD, Last month, Last quarter, Last year, and This month. The date range now starts at year to date through the last closed month, the range most people were already choosing by hand. When Genius Sheets formulas can't update, the add-in now says why: you're signed out, your session expired, your plan doesn't include filters, or your accounting data couldn't be reached. Where it helps, you can sign in again right from the message.</p>"
             },
             {
+              "title": "Account activity: see chart of accounts changes as they happen",
+              "platforms": [
+                "Web dashboard",
+                "Excel"
+              ],
+              "body_html": "<p>When someone adds, renames, moves, merges, or deactivates an account in QuickBooks, Genius Sheets now records it on the new Activity page. That makes it easy to see when a formula report needs a new row or an updated label. Each change shows the company, the account's full name, and what happened, such as \"Renamed from Travel\" or \"Moved under Expenses:Office\". The page opens on chart of accounts changes from the last 30 days. You can filter by company, date range, or type of change, and also show journal entries, bills, expenses, sales, and transfers. In Excel, a new Activity button lists the same changes for the selected company or for all of your companies, and a badge counts changes you haven't seen yet. Activity is recorded from QuickBooks starting this month.</p>"
+            },
+            {
               "title": "Full alerts for every plan",
               "platforms": [
                 "Web dashboard"

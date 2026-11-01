@@ -10,6 +10,11 @@ Missing something or want detail on a specific release? Email info@geniussheets.
 
 ### November 2026
 
+#### Account activity, date presets, and clearer formula errors in Google Sheets
+Platforms: Google Sheets
+
+The Google Sheets add-in now has the Account Activity panel from Excel. A new Account Activity button on the main menu lists chart of accounts changes from QuickBooks, such as accounts added, renamed, moved, merged, or deactivated, for the selected company or for all of your companies. You can also show journal entries, bills, expenses, sales, and transfers, and a badge counts changes you haven't seen yet. Reports now have one-click date ranges (YTD, Last month, Last quarter, Last year, and This month) and open on year to date, through the end of the current month. A new calendar opens on the year first, so earlier periods are a few clicks away. When Genius Sheets formulas can't calculate, the sidebar now says why: you're signed out, your session expired, your plan doesn't include filters, a date in the formula isn't valid, or your accounting data couldn't be reached. Where signing in again fixes it, you can do that right from the message.
+
 #### Full account names for journal entry imports
 Platforms: Excel
 
@@ -20,7 +25,7 @@ Balance Sheet and Profit and Loss reports can now include each account's full Qu
 #### Date presets and clearer formula errors in Excel
 Platforms: Excel
 
-Reports now have one-click date ranges: YTD, Last month, Last quarter, Last year, and This month. The date range now starts at year to date through the last closed month, the range most people were already choosing by hand. When Genius Sheets formulas can't update, the add-in now says why: you're signed out, your session expired, your plan doesn't include filters, or your accounting data couldn't be reached. Where it helps, you can sign in again right from the message.
+Reports now have one-click date ranges: YTD, Last month, Last quarter, Last year, and This month. Reports now open on year to date, from January 1 through the end of the current month. When Genius Sheets formulas can't update, the add-in now says why: you're signed out, your session expired, your plan doesn't include filters, or your accounting data couldn't be reached. Where it helps, you can sign in again right from the message.
 
 #### Account activity: see chart of accounts changes as they happen
 Platforms: Web dashboard, Excel

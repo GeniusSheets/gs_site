@@ -8,6 +8,13 @@ Missing something or want detail on a specific release? Email info@geniussheets.
 
 ## 2026
 
+### November 2026
+
+#### Full account names for journal entry imports
+Platforms: Excel
+
+Balance Sheet and Profit and Loss reports can now include each account's full QuickBooks name, ready to paste into a journal entry import. Turn on Full Account Names in the Reports pane, and the report gets a column with names in the format QuickBooks' import expects, such as "Investment:Capital Partners Partnership". Accounts with an account number get it in front, once: "5332 Insurance Expense:Homeowners Insurance". Companies that number some accounts and not others come out right, account by account. The rest of the report, including any Genius Sheets formulas, stays where it was.
+
 ### October 2026
 
 #### Date presets and clearer formula errors in Excel

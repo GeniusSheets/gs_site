@@ -1,0 +1,58 @@
+# Builds the Jekyll site and deploys straight to prod (Cloudflare Pages)
+# on merge to main. No staging: PRs only build. Cut a semver tag on main
+# to mark a release; rollback is re-running this workflow from that tag.
+#
+# BEFORE enabling: confirm geniussheets.us is not already deployed by a
+# Cloudflare Pages Git integration, or pushes would double-deploy. If it
+# is Git-connected, disconnect it there first so Actions is the only path.
+#
+# Required repo secrets: CLOUDFLARE_API_TOKEN (Pages: Edit),
+# CLOUDFLARE_ACCOUNT_ID.
+# Required repo variable: CLOUDFLARE_PAGES_PROJECT (Pages project name).
+name: Deploy prod (Cloudflare Pages)
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+  workflow_dispatch:
+
+concurrency:
+  group: deploy-${{ github.head_ref || github.ref_name }}
+  cancel-in-progress: true
+
+jobs:
+  deploy:
+    runs-on: ubuntu-24.04
+    permissions:
+      contents: read
+      deployments: write
+    steps:
+      - uses: actions/checkout@v6
+
+      - uses: ruby/setup-ruby@v1
+        with:
+          bundler-cache: true
+
+      - name: Build
+        run: bundle exec jekyll build
+        env:
+          JEKYLL_ENV: production
+
+      - name: Check Pages project configured
+        if: github.event_name != 'pull_request'
+        run: |
+          if [ -z "${{ vars.CLOUDFLARE_PAGES_PROJECT }}" ]; then
+            echo "::error::Repo variable CLOUDFLARE_PAGES_PROJECT is not set (Cloudflare Pages project name)."
+            exit 1
+          fi
+
+      - name: Deploy
+        if: github.event_name != 'pull_request'
+        uses: cloudflare/wrangler-action@v3
+        with:
+          apiToken: ${{ secrets.CLOUDFLARE_API_TOKEN }}
+          accountId: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
+          # Wrangler 4 reroutes Pages commands to Workers autoconfig; stay on 3 for Pages.
+          wranglerVersion: "3.114.17"
+          command: pages deploy _site --project-name=${{ vars.CLOUDFLARE_PAGES_PROJECT }} --branch=main --commit-dirty=true

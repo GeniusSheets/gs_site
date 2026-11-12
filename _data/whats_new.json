@@ -10,6 +10,14 @@
           "id": "november-2026",
           "items": [
             {
+              "title": "Adjusted EBITDA: a documented, diligence-ready EBITDA every month",
+              "platforms": [
+                "Web dashboard",
+                "Excel"
+              ],
+              "body_html": "<p>The new Adjusted EBITDA add-on keeps reported and adjusted EBITDA up to date for each QuickBooks Online and Xero company and for entity groups you define. Every profit and loss account gets an EBITDA class, such as revenue, operating expense, interest, taxes, depreciation, or amortization, suggested from its QuickBooks or Xero section and name, and you can override any of them. Addbacks and pro forma adjustments live outside your books, each with a category, rationale, and evidence; anyone on the team can draft one and the team owner approves it. Lock the pack you delivered for a period, and the Locked packs tab shows which accounts and adjustments changed its numbers since. Covenants tracks minimum adjusted EBITDA, total leverage, and fixed charge coverage with headroom by month, and emails your team when a covenant moves into warning, breach, or back. In Excel, the Adjusted EBITDA page builds a bridge from net income to adjusted EBITDA, monthly and trailing twelve months, with live formulas, the new GS.ADJ function for adjustments, and a tie-out against the server figure. It can also add a Changes since last pack sheet and build a diligence pack: cover, monthly P&L by entity, the EBITDA bridge, the adjustment schedule, class mapping, changes since the last locked pack, and covenant status. Consolidated figures add up entities without intercompany eliminations. Adjusted EBITDA is $25/month per connection with a $250 monthly minimum, added from your team's billing page.</p>"
+            },
+            {
               "title": "Account activity, date presets, and clearer formula errors in Google Sheets",
               "platforms": [
                 "Google Sheets"

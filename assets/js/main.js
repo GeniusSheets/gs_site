@@ -24,10 +24,11 @@ document.addEventListener('DOMContentLoaded', function () {
         });
         if (res.ok) {
           contactForm.reset();
-          status.textContent = "Thanks — we'll get back to you within 24 hours.";
+          status.textContent = contactForm.dataset.success || "Thanks, we'll get back to you within 24 hours.";
           status.classList.add('form-status--success');
-          if (window.gtag) gtag('event', 'contact_submit', { event_category: 'lead' });
-          if (window.posthog) posthog.capture('contact_submit');
+          const leadEvent = contactForm.dataset.event || 'contact_submit';
+          if (window.gtag) gtag('event', leadEvent, { event_category: 'lead' });
+          if (window.posthog) posthog.capture(leadEvent);
         } else {
           const data = await res.json().catch(() => ({}));
           status.textContent = data.errors?.[0]?.message || 'Something went wrong. Please email info@geniussheets.us.';

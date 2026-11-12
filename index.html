@@ -14,8 +14,8 @@ image: /assets/images/hero/hero-screenshot.png
       <p class="hero-announce"><span class="hero-announce-badge">New</span> Xero is live. Mix QuickBooks Online and Xero entities under one login.</p>
       <p class="hero-subtitle">Genius Sheets connects the Excel or Google Sheets workbook you already use to every QuickBooks Online and Xero entity you manage, and keeps it current in near real-time. Each month the reports are already prepared, and your job is the review. No exports. No copy-paste.</p>
       <div class="hero-cta">
-        <a href="#teardown" class="btn btn-primary btn-lg">Send Us Your Workbook</a>
-        <a href="https://app.geniussheets.com/signup" class="btn btn-outline btn-lg">Start For Free</a>
+        <a href="https://app.geniussheets.com/signup" class="btn btn-primary btn-lg">Start For Free</a>
+        <a href="{{ '/contact' | relative_url }}" class="btn btn-outline btn-lg">Chat With Us</a>
       </div>
       <p class="social-proof">Trusted by finance teams managing <strong>$430m+</strong> in revenue across hundreds of entities</p>
     </div>
@@ -167,18 +167,18 @@ image: /assets/images/hero/hero-screenshot.png
 <!-- How It Works -->
 <section class="how-it-works" id="how-it-works">
   <div class="container">
-    <h2 class="section-title">From Your Workbook to Review-Ready in 3 Steps</h2>
+    <h2 class="section-title">Review-Ready in 3 Steps</h2>
     <div class="steps-grid">
       <div class="step-card">
         <div class="step-number">1</div>
-        <h3>Send Us Your Workbook</h3>
-        <p>Share the workbook you prepare by hand today. Within 48 hours we show you which parts Genius Sheets can prepare for you.</p>
+        <h3>Start Your Free Trial</h3>
+        <p>Create your account and connect your QuickBooks Online and Xero entities. No credit card required.</p>
       </div>
       <img loading="lazy" decoding="async" src="{{ '/assets/images/steps/arrow-1.svg' | relative_url }}" alt="" class="step-arrow">
       <div class="step-card">
         <div class="step-number">2</div>
-        <h3>Connect Your Books</h3>
-        <p>Grant access to your QuickBooks Online and Xero entities. Our team maps your workbook to them, or you can do it yourself with our add-in for Excel and Google Sheets.</p>
+        <h3>Connect Your Workbook</h3>
+        <p>Install the add-in for Excel or Google Sheets and link your existing reports to live data, in your own layout. On Enterprise plans, our team can set it up for you.</p>
       </div>
       <img loading="lazy" decoding="async" src="{{ '/assets/images/steps/arrow-2.svg' | relative_url }}" alt="" class="step-arrow">
       <div class="step-card">
@@ -187,44 +187,6 @@ image: /assets/images/hero/hero-screenshot.png
         <p>Each month your workbook is already current. Check the numbers, drill into anything that looks off, and send it.</p>
       </div>
     </div>
-  </div>
-</section>
-
-<!-- Workbook Teardown -->
-<section class="contact-section" id="teardown">
-  <div class="container">
-    <h2 class="section-title">Free 48-Hour Workbook Teardown</h2>
-    <p class="section-subtitle">Tell us about the one report you dread preparing each month. We'll reply with where to send the workbook. Within 48 hours of receiving it, you get it back marked up: what Genius Sheets can prepare for you, and what still needs your judgment. Free, with no obligation.</p>
-    {% if site.formspree_id and site.formspree_id != "" %}
-    <form class="contact-form" id="contact-form" action="https://formspree.io/f/{{ site.formspree_id }}" method="POST" data-event="teardown_request" data-success="Thanks. We'll reply within one business day with where to send your workbook.">
-      <div class="form-row">
-        <div class="form-group">
-          <label for="td-name">Name</label>
-          <input type="text" id="td-name" name="name" required>
-        </div>
-        <div class="form-group">
-          <label for="td-email">Work Email</label>
-          <input type="email" id="td-email" name="email" required>
-        </div>
-      </div>
-      <div class="form-group">
-        <label for="td-entities">How many QuickBooks or Xero entities do you manage?</label>
-        <input type="text" id="td-entities" name="entities">
-      </div>
-      <div class="form-group">
-        <label for="td-message">What does the workbook do, and which part takes the longest?</label>
-        <textarea id="td-message" name="message" rows="4" required></textarea>
-      </div>
-      <input type="text" name="_gotcha" tabindex="-1" autocomplete="off" style="position:absolute;left:-9999px;">
-      <input type="hidden" name="_subject" value="Workbook teardown request: geniussheets.us">
-      <button type="submit" class="btn btn-primary btn-block">Request My Free Teardown</button>
-      <p class="form-status" id="contact-form-status" role="status" aria-live="polite"></p>
-    </form>
-    {% else %}
-    <div class="contact-form-fallback">
-      <p>Email <a href="mailto:{{ site.email }}?subject=Workbook%20teardown">{{ site.email }}</a> and we'll reply with where to send your workbook.</p>
-    </div>
-    {% endif %}
   </div>
 </section>
 
@@ -399,6 +361,44 @@ image: /assets/images/hero/hero-screenshot.png
         </div>
       </div>
 </div>
+  </div>
+</section>
+
+<!-- Workbook Teardown -->
+<section class="contact-section" id="teardown">
+  <div class="container">
+    <h2 class="section-title">Free 48-Hour Workbook Teardown</h2>
+    <p class="section-subtitle">Tell us about the one report you dread preparing each month. We'll reply with where to send the workbook. Within 48 hours of receiving it, you get it back marked up: what Genius Sheets can prepare for you, and what still needs your judgment. Free, with no obligation.</p>
+    {% if site.formspree_id and site.formspree_id != "" %}
+    <form class="contact-form" id="contact-form" action="https://formspree.io/f/{{ site.formspree_id }}" method="POST" data-event="teardown_request" data-success="Thanks. We'll reply within one business day with where to send your workbook.">
+      <div class="form-row">
+        <div class="form-group">
+          <label for="td-name">Name</label>
+          <input type="text" id="td-name" name="name" required>
+        </div>
+        <div class="form-group">
+          <label for="td-email">Work Email</label>
+          <input type="email" id="td-email" name="email" required>
+        </div>
+      </div>
+      <div class="form-group">
+        <label for="td-entities">How many QuickBooks or Xero entities do you manage?</label>
+        <input type="text" id="td-entities" name="entities">
+      </div>
+      <div class="form-group">
+        <label for="td-message">What does the workbook do, and which part takes the longest?</label>
+        <textarea id="td-message" name="message" rows="4" required></textarea>
+      </div>
+      <input type="text" name="_gotcha" tabindex="-1" autocomplete="off" style="position:absolute;left:-9999px;">
+      <input type="hidden" name="_subject" value="Workbook teardown request: geniussheets.us">
+      <button type="submit" class="btn btn-primary btn-block">Request My Free Teardown</button>
+      <p class="form-status" id="contact-form-status" role="status" aria-live="polite"></p>
+    </form>
+    {% else %}
+    <div class="contact-form-fallback">
+      <p>Email <a href="mailto:{{ site.email }}?subject=Workbook%20teardown">{{ site.email }}</a> and we'll reply with where to send your workbook.</p>
+    </div>
+    {% endif %}
   </div>
 </section>
 

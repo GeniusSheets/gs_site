@@ -178,7 +178,7 @@ image: /assets/images/hero/hero-screenshot.png
       <div class="step-card">
         <div class="step-number">2</div>
         <h3>Connect Your Workbook</h3>
-        <p>Install the add-in for Excel or Google Sheets and link your existing reports to live data, in your own layout. On Enterprise plans, our team can set it up for you.</p>
+        <p>Install the add-in for Excel or Google Sheets and link your existing reports to live data, in your own layout. During your trial, our team sets up your first report for you.</p>
       </div>
       <img loading="lazy" decoding="async" src="{{ '/assets/images/steps/arrow-2.svg' | relative_url }}" alt="" class="step-arrow">
       <div class="step-card">
@@ -308,11 +308,11 @@ image: /assets/images/hero/hero-screenshot.png
     <div class="faq-list">
       <div class="faq-item">
         <button class="faq-question">
-          What is the free workbook teardown?
+          What is the free report setup?
           <span class="faq-icon">+</span>
         </button>
         <div class="faq-answer">
-          <p>Walk us through a report you prepare by hand, on a 30-minute screen share or by sending a copy with the numbers removed. We never need your figures or your clients' data. Within 48 hours you get a marked-up summary showing which parts Genius Sheets can prepare for you and which still need your judgment. It is free and there is no obligation. <a href="#teardown">Request one here</a>.</p>
+          <p>Every free trial includes one report set up by our team. You show us how you build it today on a 30-minute screen share, and we rebuild it in your workbook, connected to your QuickBooks and Xero books, in your layout. We only need a copy of the workbook with the values cleared; the numbers come from your connected books. <a href="#setup">Request yours here</a>.</p>
         </div>
       </div>
       <div class="faq-item">
@@ -330,7 +330,7 @@ image: /assets/images/hero/hero-screenshot.png
           <span class="faq-icon">+</span>
         </button>
         <div class="faq-answer">
-          <p>Yes, a two-week free trial with up to 2 connections, no credit card required. Upgrade anytime from your account.</p>
+          <p>Yes, a two-week free trial with up to 2 connections, no credit card required, and our team will set up one report for you during it. Upgrade anytime from your account.</p>
         </div>
       </div>
       <div class="faq-item">
@@ -364,13 +364,13 @@ image: /assets/images/hero/hero-screenshot.png
   </div>
 </section>
 
-<!-- Workbook Teardown -->
-<section class="contact-section" id="teardown">
+<!-- Free Report Setup -->
+<section class="contact-section" id="setup">
   <div class="container">
-    <h2 class="section-title">Free 48-Hour Workbook Teardown</h2>
-    <p class="section-subtitle">Tell us about the one report you dread preparing each month, and we'll set up a 30-minute screen share where you walk us through it. No file and no numbers needed. Prefer to send something? A copy with the values cleared works too. Within 48 hours you get a marked-up summary: what Genius Sheets can prepare for you, and what still needs your judgment. Free, with no obligation.</p>
+    <h2 class="section-title">Your First Report, Set Up Free</h2>
+    <p class="section-subtitle">Every free trial includes one report set up by our team. Tell us about the report you dread preparing each month. On a 30-minute screen share you show us how you build it today, and we rebuild it in your workbook, connected to your QuickBooks and Xero books, in your layout. From then on it fills itself, and your job is the review. One report per trial, no credit card.</p>
     {% if site.formspree_id and site.formspree_id != "" %}
-    <form class="contact-form" id="contact-form" action="https://formspree.io/f/{{ site.formspree_id }}" method="POST" data-event="teardown_request" data-success="Thanks. We'll reply within one business day to set up a time.">
+    <form class="contact-form" id="contact-form" action="https://formspree.io/f/{{ site.formspree_id }}" method="POST" data-event="report_setup_request" data-success="Thanks. We'll reply within one business day to book your walkthrough. If you haven't yet, start your free trial at app.geniussheets.com/signup.">
       <div class="form-row">
         <div class="form-group">
           <label for="td-name">Name</label>
@@ -386,17 +386,17 @@ image: /assets/images/hero/hero-screenshot.png
         <input type="text" id="td-entities" name="entities">
       </div>
       <div class="form-group">
-        <label for="td-message">What does the workbook do, and which part takes the longest?</label>
+        <label for="td-message">Which report is it, and which part takes the longest?</label>
         <textarea id="td-message" name="message" rows="4" required></textarea>
       </div>
       <input type="text" name="_gotcha" tabindex="-1" autocomplete="off" aria-hidden="true" style="display:none">
-      <input type="hidden" name="_subject" value="Workbook teardown request: geniussheets.us">
-      <button type="submit" class="btn btn-primary btn-block">Request My Free Teardown</button>
+      <input type="hidden" name="_subject" value="Free report setup request: geniussheets.us">
+      <button type="submit" class="btn btn-primary btn-block">Set Up My First Report</button>
       <p class="form-status" id="contact-form-status" role="status" aria-live="polite"></p>
     </form>
     {% else %}
     <div class="contact-form-fallback">
-      <p>Email <a href="mailto:{{ site.email }}?subject=Workbook%20teardown">{{ site.email }}</a> and we'll set up a time to walk through it.</p>
+      <p>Email <a href="mailto:{{ site.email }}?subject=Free%20report%20setup">{{ site.email }}</a> and we'll book a time for your walkthrough.</p>
     </div>
     {% endif %}
   </div>

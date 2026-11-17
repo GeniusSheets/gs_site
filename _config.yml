@@ -10,9 +10,10 @@ location: "Philadelphia, PA"
 
 google_analytics: G-72PG6GMT2S
 
-# Paste your PostHog project API key here to enable session replay + autocapture.
-# Find it at: https://us.posthog.com/project/settings (Project API Key)
-posthog_key: "phc_wg3BTLfGYQ5nRYZ8vy9ruWxfzRsFvvo7ee7bdFkUaCXJ"
+# PostHog project API key. This is the app's project (gs_web, 299958) on purpose:
+# site visits and app signups must share one project so the funnel can join them.
+# Site events carry app_source=site. The old site-only project (426450) is an archive.
+posthog_key: "phc_l09Pukm6v4yChlRMwHJxkreKqCALjsPOpmUmrVhOmUo"
 posthog_host: "https://us.i.posthog.com"
 
 # Formspree endpoint for the contact form. Create a form at https://formspree.io/

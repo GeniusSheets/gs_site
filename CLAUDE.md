@@ -1,6 +1,6 @@
 # Genius Sheets marketing website
 
-Shared instructions live in [AGENTS.md](/home/jconley/workspace/gs/gs_site/AGENTS.md). Start there.
+Shared instructions live in [AGENTS.md](AGENTS.md). Start there.
 
 ## Claude Code
 

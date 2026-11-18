@@ -13,6 +13,8 @@
     window.dataLayer = window.dataLayer || [];
     function gtag(){dataLayer.push(arguments);}
     gtag('js', new Date());
+    // Same GA4 property as app.geniussheets.com; carry the GA client ID across.
+    gtag('set', 'linker', { domains: ['geniussheets.us', 'app.geniussheets.com'] });
     gtag('config', '{{ site.google_analytics }}');
   </script>
   {% endif %}

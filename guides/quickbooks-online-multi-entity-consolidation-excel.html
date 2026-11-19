@@ -1,12 +1,14 @@
 ---
 layout: default
 permalink: /guides/quickbooks-online-multi-entity-consolidation-excel/
-title: "QuickBooks Online Multi-Entity Consolidation in Excel"
-description: "QBO doesn't consolidate company files natively. Keep your Excel workbook live across every entity, with no monthly export cycle."
+title: "QuickBooks Online Consolidation in Excel (Multi-Entity)"
+description: "QuickBooks Online can't consolidate separate company files. How teams consolidate QBO exports in Excel today, and how to keep that workbook live instead."
 image: /assets/images/hero/hero-screenshot.png
 faq:
   - q: "Can QuickBooks Online consolidate multiple companies?"
-    a: "Not natively. Each QuickBooks Online subscription is one company file with its own books, and there is no built-in consolidated P&L, balance sheet, or cash flow across separate company files. Any group or combined view is built outside QBO, which is why almost every multi-entity team ends up doing it in Excel."
+    a: "Not natively. Each QuickBooks Online subscription is one company file with its own books, and there is no built-in consolidated P&L, balance sheet, or cash flow across separate company files. Intuit sells a separate product, Intuit Enterprise Suite, that consolidates entities for businesses that move onto it. Teams that stay on QuickBooks Online build the group view outside it, usually in Excel."
+  - q: "Can I sync multiple QuickBooks Online companies into one spreadsheet?"
+    a: "Yes. Genius Sheets connects each QuickBooks Online company under one login, and its formulas can pull any of them into any cell of one Excel or Google Sheets workbook. Each company stays its own set of books in QuickBooks."
   - q: "What is the difference between Genius Sheets and QBO Advanced or Spreadsheet Sync?"
     a: "Spreadsheet Sync and QBO Advanced multi-company tools are oriented around pulling combined exports into a workbook. Genius Sheets connects every entity's books to formulas in your own permanent workbook, so your house format (partner schedules, management fees, lender packs) recalculates when the books move, rather than being rebuilt around a fresh export each month."
   - q: "How many QuickBooks entities can I connect?"
@@ -31,7 +33,7 @@ faq:
 <!-- Hero -->
 <section class="page-hero">
   <div class="container">
-    <h1>QuickBooks Online wasn't built to consolidate your entities</h1>
+    <h1>How to consolidate multiple QuickBooks Online companies</h1>
     <p class="page-subtitle">QBO is one company per subscription. Your consolidation still happens in Excel. Keep the workbook and connect the books, live across every entity.</p>
   </div>
 </section>
@@ -54,11 +56,26 @@ faq:
         <li>A "live" workbook that was live on the day it was pasted</li>
       </ul>
 
+      <h2>How to consolidate QuickBooks Online exports in Excel</h2>
+      <p>This is the manual method most multi-entity teams use today:</p>
+      <ol>
+        <li>Run the same report (P&amp;L or balance sheet) in each QuickBooks Online company, with the same date range and accounting basis.</li>
+        <li>Export each one to Excel and paste it into its own tab in a master workbook.</li>
+        <li>Map each company's accounts to one group chart of accounts, so lines with different names land on the same row.</li>
+        <li>Add the mapped columns together on a consolidation tab.</li>
+        <li>Post intercompany eliminations, so sales, loans and fees between your own entities don't count twice.</li>
+        <li>Tie each entity's column back to that company's own report totals before the report goes out.</li>
+      </ol>
+      <p>The mapping and the consolidation tab are built once. The exports, pastes and eliminations repeat every month for every company, and that is where the errors below come from.</p>
+
       <h2>Why the spreadsheet workaround keeps breaking</h2>
       <p>The export-and-paste model fails in predictable ways. A new entity is added and the master workbook does not know about it until someone wires it in by hand. An account is renamed in one company, so a formula that matched on text quietly returns the wrong number. A month closes late, and the "current" pack is built on data that changed after it was pasted. None of these are Excel's fault. They happen because the workbook is disconnected from the ledgers, so every refresh is a manual rebuild instead of a recalculation.</p>
 
       <h2>QBO Advanced and Spreadsheet Sync are close, but not your model</h2>
       <p>Even QuickBooks Online Advanced multi-company tools that land data in Excel are still oriented around combined exports. They can get numbers into a sheet, but the shape of that output is theirs, not <em>your</em> permanent house format with partner schedules, management fees, or lender packs that recalculate when the books move. You end up rebuilding your model around their export every period.</p>
+
+      <h2>What about Intuit Enterprise Suite?</h2>
+      <p>Intuit Enterprise Suite is a separate Intuit product for multi-entity businesses. It consolidates entities and handles intercompany entries inside the accounting system, and getting there means moving your entities onto it. If your entities are staying on QuickBooks Online, or the group report has to live in your own workbook format, the consolidation stays in Excel. That is the case Genius Sheets is built for.</p>
 
       <h2>Keep the workbook. Connect the books.</h2>
       <p>Genius Sheets sits above QuickBooks Online (and Xero). Simple formulas (<strong>GS.IS</strong>, <strong>GS.BS</strong>, <strong>GS.CF</strong>) pull live financials into any cell of the Excel or Google Sheets file you already own. Your formats stay yours. Refresh daily. Drill from a consolidated number down to the transaction. Connect every QBO file under one login.</p>

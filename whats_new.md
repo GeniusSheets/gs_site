@@ -8,34 +8,51 @@ Missing something or want detail on a specific release? Email info@geniussheets.
 
 ## 2026
 
+### November 2026
+
+#### Adjusted EBITDA: a documented, diligence-ready EBITDA every month
+Platforms: Web dashboard, Excel, Google Sheets
+
+The new Adjusted EBITDA add-on keeps reported and adjusted EBITDA up to date for each QuickBooks Online and Xero company and for entity groups you define. Every profit and loss account gets an EBITDA class, such as revenue, operating expense, interest, taxes, depreciation, or amortization, suggested from its QuickBooks or Xero section and name, and you can override any of them. Addbacks and pro forma adjustments live outside your books, each with a category, rationale, and evidence; anyone on the team can draft one and the team owner approves it. Lock the pack you delivered for a period, and the Locked packs tab shows which accounts and adjustments changed its numbers since. Covenants tracks minimum adjusted EBITDA, total leverage, and fixed charge coverage with headroom by month, and emails your team when a covenant moves into warning, breach, or back. In Excel and Google Sheets, the Adjusted EBITDA page builds a bridge from net income to adjusted EBITDA, monthly and trailing twelve months, with live formulas, the new GS.ADJ function (GS_ADJ in Google Sheets) for adjustments, and a tie-out against the server figure. It can also add a Changes since last pack sheet and build a diligence pack: cover, monthly P&L by entity, the EBITDA bridge, the adjustment schedule, class mapping, changes since the last locked pack, and covenant status. Consolidated figures add up entities without intercompany eliminations. Adjusted EBITDA is $25/month per connection with a $250 monthly minimum, added from your team's billing page. [How to try it](https://app.geniussheets.com/faq#adjusted-ebitda).
+
+#### Account activity, date presets, and clearer formula errors in Google Sheets
+Platforms: Google Sheets
+
+The Google Sheets add-in now has the Account Activity panel from Excel. A new Account Activity button on the main menu lists chart of accounts changes from QuickBooks, such as accounts added, renamed, moved, merged, or deactivated, for the selected company or for all of your companies. You can also show journal entries, bills, expenses, sales, and transfers, and a badge counts changes you haven't seen yet. Reports now have one-click date ranges (YTD, Last month, Last quarter, Last year, and This month) and open on year to date, through the end of the current month. A new calendar opens on the year first, so earlier periods are a few clicks away. When Genius Sheets formulas can't calculate, the sidebar now says why: you're signed out, your session expired, your plan doesn't include filters, a date in the formula isn't valid, or your accounting data couldn't be reached. Where signing in again fixes it, you can do that right from the message. How to try: [Account Activity](https://app.geniussheets.com/faq#account-activity), [date presets and formula errors](https://app.geniussheets.com/faq#date-presets).
+
+#### Full account names for journal entry imports
+Platforms: Excel
+
+Balance Sheet and Profit and Loss reports can now include each account's full QuickBooks name, ready to paste into a journal entry import. Turn on Full Account Names in the Reports pane, and the report gets a column with names in the format QuickBooks' import expects, such as "Investment:Capital Partners Partnership". Accounts with an account number get it in front, once: "5332 Insurance Expense:Homeowners Insurance". Companies that number some accounts and not others come out right, account by account. The rest of the report, including any Genius Sheets formulas, stays where it was. [How to try it](https://app.geniussheets.com/faq#full-account-names).
+
 ### October 2026
 
 #### Date presets and clearer formula errors in Excel
 Platforms: Excel
 
-Reports now have one-click date ranges: YTD, Last month, Last quarter, Last year, and This month. The date range now starts at year to date through the last closed month, the range most people were already choosing by hand. When Genius Sheets formulas can't update, the add-in now says why: you're signed out, your session expired, your plan doesn't include filters, or your accounting data couldn't be reached. Where it helps, you can sign in again right from the message.
+Reports now have one-click date ranges: YTD, Last month, Last quarter, Last year, and This month. Reports now open on year to date, from January 1 through the end of the current month. When Genius Sheets formulas can't update, the add-in now says why: you're signed out, your session expired, your plan doesn't include filters, or your accounting data couldn't be reached. Where it helps, you can sign in again right from the message. [How to try it](https://app.geniussheets.com/faq#date-presets).
 
 #### Account activity: see chart of accounts changes as they happen
 Platforms: Web dashboard, Excel
 
-When someone adds, renames, moves, merges, or deactivates an account in QuickBooks, Genius Sheets now records it on the new Activity page. That makes it easy to see when a formula report needs a new row or an updated label. Each change shows the company, the account's full name, and what happened, such as "Renamed from Travel" or "Moved under Expenses:Office". The page opens on chart of accounts changes from the last 30 days. You can filter by company, date range, or type of change, and also show journal entries, bills, expenses, sales, and transfers. In Excel, a new Activity button lists the same changes for the selected company or for all of your companies, and a badge counts changes you haven't seen yet. Activity is recorded from QuickBooks starting this month.
+When someone adds, renames, moves, merges, or deactivates an account in QuickBooks, Genius Sheets now records it on the new Activity page. That makes it easy to see when a formula report needs a new row or an updated label. Each change shows the company, the account's full name, and what happened, such as "Renamed from Travel" or "Moved under Expenses:Office". The page opens on chart of accounts changes from the last 30 days. You can filter by company, date range, or type of change, and also show journal entries, bills, expenses, sales, and transfers. In Excel, a new Activity button lists the same changes for the selected company or for all of your companies, and a badge counts changes you haven't seen yet. Activity is recorded from QuickBooks starting this month. [How to try it](https://app.geniussheets.com/faq#account-activity).
 
 #### Full alerts for every plan
 Platforms: Web dashboard
 
-Full alerts are now available on every plan for $5/month per connection, and Alerts has its own link in the top navigation. On top of the Basic alerts included with every plan, Full alerts watch cash runway for each company and across all of them, expense spikes, unusually large expenses, gross margin drops, receivables growing faster than revenue, and variance against your QuickBooks budgets, with thresholds you can adjust to match how your business runs. Add or remove them anytime from your team's billing page, and the price follows your connection count. Enterprise plans include Full alerts.
+Full alerts are now available on every plan for $5/month per connection, and Alerts has its own link in the top navigation. On top of the Basic alerts included with every plan, Full alerts watch cash runway for each company and across all of them, expense spikes, unusually large expenses, gross margin drops, receivables growing faster than revenue, and variance against your QuickBooks budgets, with thresholds you can adjust to match how your business runs. Add or remove them anytime from your team's billing page, and the price follows your connection count. Enterprise plans include Full alerts. [How to try it](https://app.geniussheets.com/faq#alerts).
 
 ### September 2026
 
 #### Alerts: daily checks on your books (beta)
 Platforms: Web dashboard
 
-Genius Sheets now checks each connected company's books every day and flags what needs attention on the new Alerts page. Basic alerts, included with every plan, cover a cash balance dropping below a floor, a bank account going overdrawn, a month closing at a net loss, and a QuickBooks or Xero connection that needs reconnecting. Pick a company to see its alerts, and turn individual alerts on or off for your team.
+Genius Sheets now checks each connected company's books every day and flags what needs attention on the new Alerts page. Basic alerts, included with every plan, cover a cash balance dropping below a floor, a bank account going overdrawn, a month closing at a net loss, and a QuickBooks or Xero connection that needs reconnecting. Pick a company to see its alerts, and turn individual alerts on or off for your team. [How to try it](https://app.geniussheets.com/faq#alerts).
 
 #### Budget vs Actual report
 Platforms: Excel, Google Sheets
 
-Compare your QuickBooks budget to actuals without leaving your spreadsheet. The new Budget vs Actual report builds a worksheet with Actual, Budget, Variance $, and Variance % for every account, month by month, plus a year-to-date summary. Pick a company, choose one of your QuickBooks budgets, set a date range, and the report fills in with live formulas that recalculate as your data refreshes. In Google Sheets, you can also lay out the whole period in a single column, the date range defaults to the year to date through the last closed month, and the report option only appears for companies that have a budget in QuickBooks. Quarterly and annual QuickBooks budgets are supported too: their amounts are spread evenly across the months they cover, so every budget shows up in your monthly view.
+Compare your QuickBooks budget to actuals without leaving your spreadsheet. The new Budget vs Actual report builds a worksheet with Actual, Budget, Variance $, and Variance % for every account, month by month, plus a year-to-date summary. Pick a company, choose one of your QuickBooks budgets, set a date range, and the report fills in with live formulas that recalculate as your data refreshes. In Google Sheets, you can also lay out the whole period in a single column, the date range defaults to the year to date through the last closed month, and the report option only appears for companies that have a budget in QuickBooks. Quarterly and annual QuickBooks budgets are supported too: their amounts are spread evenly across the months they cover, so every budget shows up in your monthly view. [How to try it](https://app.geniussheets.com/faq#budget-vs-actual).
 
 ### August 2026
 
@@ -49,12 +66,12 @@ The team billing card now shows any complimentary seats on your plan alongside y
 #### AI Analyst: ask your financials in plain English
 Platforms: Web dashboard
 
-Ask questions about your finances in plain English and get instant answers, right in the web dashboard. The new AI Analyst tab reads your live QuickBooks data (Profit and Loss, balance sheet, cash flow, invoices, and customers) and answers questions like "What were my expenses last month?" or "Which invoices are overdue?" Pick a company, type a question, and get a clear, formatted answer. Conversations are kept per company so you can pick up where you left off.
+Ask questions about your finances in plain English and get instant answers, right in the web dashboard. The new AI Analyst tab reads your live QuickBooks data (Profit and Loss, balance sheet, cash flow, invoices, and customers) and answers questions like "What were my expenses last month?" or "Which invoices are overdue?" Pick a company, type a question, and get a clear, formatted answer. Conversations are kept per company so you can pick up where you left off. The AI Analyst is now called Genie in the top navigation. [How to try it](https://app.geniussheets.com/faq#ai-analyst).
 
 #### Spend by Vendor report
 Platforms: Excel, Google Sheets
 
-A new Spend by Vendor report totals what you paid each vendor over a period and pulls it straight into a worksheet. Use it to spot your largest payees at a glance or to break spending out by vendor alongside your other Genius Sheets reports.
+A new Spend by Vendor report totals what you paid each vendor over a period and pulls it straight into a worksheet. Use it to spot your largest payees at a glance or to break spending out by vendor alongside your other Genius Sheets reports. [How to try it](https://app.geniussheets.com/faq#vendor-reports).
 
 #### Searchable company selector
 Platforms: Excel, Google Sheets
@@ -64,7 +81,7 @@ The company dropdown is now sorted alphabetically and type-to-filter searchable,
 #### 1099 vendor report
 Platforms: Excel, Google Sheets
 
-Pull your 1099-eligible QuickBooks vendors and what you paid each of them for the year straight into a worksheet, with a flag for who crossed the $600 threshold. It defaults to the prior calendar year on a cash basis. Use it to reconcile against QuickBooks' own 1099 list before filing. Payments made by card or third-party networks (reported separately on a 1099-K) are not included.
+Pull your 1099-eligible QuickBooks vendors and what you paid each of them for the year straight into a worksheet, with a flag for who crossed the $600 threshold. It defaults to the prior calendar year on a cash basis. Use it to reconcile against QuickBooks' own 1099 list before filing. Payments made by card or third-party networks (reported separately on a 1099-K) are not included. [How to try it](https://app.geniussheets.com/faq#vendor-reports).
 
 #### Team billing and member management
 Platforms: Web dashboard, Backend
@@ -133,7 +150,7 @@ Early Xero OAuth and report sync shipped behind a feature flag while we validate
 #### Budget formulas
 Platforms: Excel, Google Sheets, Backend
 
-New `GS.IS.BUDGET` / `GS_IS_BUDGET` formulas pull budget amounts from QuickBooks Online so you can compare actual vs budget in the same spreadsheet layout. See the [FAQ](/faq#income-statement-budget-gs-is-budget) for syntax and examples.
+New `GS.IS.BUDGET` / `GS_IS_BUDGET` formulas pull budget amounts from QuickBooks Online so you can compare actual vs budget in the same spreadsheet layout. See the [FAQ](https://app.geniussheets.com/faq#income-statement-budget-gs-is-budget) for syntax and examples.
 
 #### Range formulas for batch pulls
 Platforms: Excel, Google Sheets
@@ -145,7 +162,7 @@ Platforms: Excel, Google Sheets
 #### FAQ and in-app support chat
 Platforms: Web dashboard, Excel, Google Sheets
 
-A searchable [FAQ](/faq) covers formulas, troubleshooting stale Excel data, and common errors. Live chat support is available from the website while you work through setup.
+A searchable [FAQ](https://app.geniussheets.com/faq) covers formulas, troubleshooting stale Excel data, and common errors. Live chat support is available from the website while you work through setup.
 
 #### Faster syncs for active accounts
 Platforms: Backend

@@ -1,0 +1,102 @@
+{% comment %}
+  DRAFT (2026-11-06), not wired into any page yet.
+  Plan: GeniusSheets/GTM/templates_and_free_tools_plan.md, Phase 4.
+
+  Usage: {% include template-download.html template="holdco" %}
+  template ids: holdco | lender | bva
+
+  Uses site.formspree_id (set in _config.yml). Without it the block falls back to email.
+  Check that the Formspree plan honors _next; if not, switch to fetch + JS redirect like contact.html.
+  Submissions with 3+ entities redirect to /templates/pilot/, the rest to /templates/thanks/.
+{% endcomment %}
+
+{% assign t = include.template | default: "holdco" %}
+{% case t %}
+  {% when "lender" %}
+    {% assign t_title = "Lender & covenant pack" %}
+    {% assign t_desc = "DSCR, leverage and liquidity tests with headroom and an 8-quarter trend, printed on one page for your lender." %}
+  {% when "bva" %}
+    {% assign t_title = "Board pack: budget vs. actual" %}
+    {% assign t_desc = "Month and YTD actual vs. budget with variance $ and %, a commentary sheet, and a one-page board summary. QuickBooks Online budgets." %}
+  {% else %}
+    {% assign t_title = "Holdco consolidation workbook" %}
+    {% assign t_desc = "Consolidated P&L and balance sheet across up to 10 entities, with an eliminations tab and a 12-month trend." %}
+{% endcase %}
+
+<section class="template-download" id="template-{{ t }}">
+  <div class="container">
+    <div class="template-download-card">
+      <div class="template-download-copy">
+        <p class="template-download-eyebrow">Free Excel template</p>
+        <h2>{{ t_title }}</h2>
+        <p>{{ t_desc }}</p>
+        <ul>
+          <li>Opens with sample data, so you can see the full layout right away</li>
+          <li>Connect QuickBooks Online or Xero through Genius Sheets and it fills in from your own books</li>
+          <li>Your workbook stays yours: change the layout, add tabs, keep your house format</li>
+        </ul>
+      </div>
+
+      {% if site.formspree_id and site.formspree_id != "" %}
+      <form class="contact-form template-download-form"
+            action="https://formspree.io/f/{{ site.formspree_id }}"
+            method="POST"
+            data-template="{{ t }}">
+        <div class="form-group">
+          <label for="td-email-{{ t }}">Work email</label>
+          <input type="email" id="td-email-{{ t }}" name="email" required>
+        </div>
+        <div class="form-group">
+          <label for="td-entities-{{ t }}">How many entities do you report on?</label>
+          <select id="td-entities-{{ t }}" name="entity_count" required>
+            <option value="" disabled selected>Select</option>
+            <option value="1">1</option>
+            <option value="2">2</option>
+            <option value="3-5">3–5</option>
+            <option value="6-15">6–15</option>
+            <option value="16+">16+</option>
+          </select>
+        </div>
+        <div class="form-group">
+          <label for="td-books-{{ t }}">Books on</label>
+          <select id="td-books-{{ t }}" name="books">
+            <option value="qbo">QuickBooks Online</option>
+            <option value="xero">Xero</option>
+            <option value="both">Both</option>
+          </select>
+        </div>
+        <input type="hidden" name="template" value="{{ t }}">
+        <input type="hidden" name="source_page" value="{{ page.url }}">
+        <input type="hidden" name="_subject" value="Template download: {{ t_title }}">
+        <input type="hidden" name="_next" value="{{ '/templates/thanks/' | absolute_url }}?t={{ t }}">
+        <input type="text" name="_gotcha" tabindex="-1" autocomplete="off" style="position:absolute;left:-9999px;">
+        <button type="submit" class="btn btn-primary btn-block">Get the template</button>
+      </form>
+      {% else %}
+      <div class="contact-form-fallback">
+        <p>Email <a href="mailto:{{ site.email }}?subject=Template%3A%20{{ t_title | url_encode }}">{{ site.email }}</a> with how many entities you report on, and we'll send the template.</p>
+      </div>
+      {% endif %}
+    </div>
+
+    <div class="guide-callout template-pilot">
+      <p><strong>Running 3 or more entities?</strong> We'll connect your own workbook, or this template, to every entity's books for 30 days, free. You get the consolidated pack live; we get feedback. Three pilot slots a month, for teams on QuickBooks Online or Xero. <a href="{{ '/contact' | relative_url }}?topic=pilot&amp;t={{ t }}">Ask about a pilot</a>.</p>
+    </div>
+  </div>
+</section>
+
+<script>
+  (function () {
+    var form = document.querySelector('#template-{{ t }} .template-download-form');
+    if (!form) return;
+    var pilotBuckets = ['3-5', '6-15', '16+'];
+    form.addEventListener('submit', function () {
+      var bucket = form.querySelector('[name="entity_count"]').value;
+      var next = pilotBuckets.indexOf(bucket) >= 0 ? '/templates/pilot/' : '/templates/thanks/';
+      form.querySelector('[name="_next"]').value = window.location.origin + next + '?t={{ t }}';
+      if (typeof gtag === 'function') {
+        gtag('event', 'template_download_submit', { template: '{{ t }}', entity_bucket: bucket });
+      }
+    });
+  })();
+</script>

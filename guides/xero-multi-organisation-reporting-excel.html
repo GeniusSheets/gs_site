@@ -1,12 +1,12 @@
 ---
 layout: default
 permalink: /guides/xero-multi-organisation-reporting-excel/
-title: "Xero Multi-Organisation Consolidation in Excel & Sheets"
-description: "Xero reports each organisation separately. Roll up multiple Xero (and QBO) entities into your existing Excel or Google Sheets model, live, not exported."
+title: "Can Xero Do Consolidations? Multi-Org Reporting in Excel"
+description: "Xero has no built-in consolidation across organisations. How groups build consolidated Xero reports today, and how to keep them live in Excel or Google Sheets."
 image: /assets/images/hero/hero-screenshot.png
 faq:
-  - q: "Does Xero consolidate multiple organisations?"
-    a: "Xero runs each organisation as its own set of books and does not ship a native consolidated view across organisations. Group, trust, and holdco reporting is built outside Xero, usually in Excel or Google Sheets, which is why multi-org teams rebuild the same pack every month."
+  - q: "Can Xero do consolidations?"
+    a: "Not across organisations. Xero runs each organisation as its own set of books and does not ship a native consolidated view across organisations. Group, trust, and holdco reporting is built outside Xero, usually in Excel or Google Sheets, which is why multi-org teams rebuild the same pack every month."
   - q: "Can I report across Xero and QuickBooks Online together?"
     a: "Yes. Genius Sheets pulls both Xero organisations and QuickBooks Online files into the same workbook under one login, so a consolidated view does not care which ledger an entity sits on. That matters after an acquisition, when a group is rarely all on one product."
   - q: "How do account names sync for formula matching?"
@@ -31,8 +31,8 @@ faq:
 <!-- Hero -->
 <section class="page-hero">
   <div class="container">
-    <h1>Xero is the ledger. Your close still runs in the spreadsheet.</h1>
-    <p class="page-subtitle">Xero reports each organisation separately. Roll up multiple Xero organisations (and QuickBooks Online) into your existing workbook, live, not exported.</p>
+    <h1>Can Xero do consolidations?</h1>
+    <p class="page-subtitle">Not across organisations. Xero reports each organisation separately, so groups build the consolidated report in a spreadsheet. Here is how, and how to keep it live.</p>
   </div>
 </section>
 
@@ -42,7 +42,7 @@ faq:
     <div class="guide-content">
       <p class="guide-lede">Xero is excellent at running a single organisation. Groups, trusts, holdcos, and advisory firms that manage many Xero organisations still rebuild the same pack every month.</p>
 
-      <p>Export P&amp;L, export balance sheet, paste, re-link, repeat for org #2 and #3. Xero does not ship a native consolidated view across organisations. The rollup lives in Excel or Google Sheets, which is fine, until the "source of truth" is a pile of stale exports.</p>
+      <p>Export P&amp;L, export balance sheet, paste, re-link, repeat for org #2 and #3. Xero does not have a built-in consolidated view across organisations; it is a long-running request on <a href="https://productideas.xero.com/forums/967133-reports-tax/suggestions/44960413-reporting-ability-to-consolidate-multiple-xero-o" rel="nofollow noopener" target="_blank">Xero's own product ideas forum</a>. The rollup lives in Excel or Google Sheets, which is fine, until the "source of truth" is a pile of stale exports.</p>
 
       <h2>What multi-org teams need</h2>
       <ul>
@@ -51,6 +51,17 @@ faq:
         <li>The ability to mix Xero and QuickBooks Online when the group isn't all on one product</li>
         <li>Drill-down when someone asks where a consolidated line came from</li>
       </ul>
+
+      <h2>How to build consolidated Xero reports in Excel</h2>
+      <p>This is the manual method most multi-org teams use today:</p>
+      <ol>
+        <li>Run the same report (profit and loss or balance sheet) in each Xero organisation, with the same dates.</li>
+        <li>Export each one to Excel or Google Sheets and paste it into its own tab in a master workbook.</li>
+        <li>Map each organisation's accounts to one group chart of accounts, so lines with different names land on the same row.</li>
+        <li>Add the mapped columns together on a consolidation tab, converting currencies first if your organisations report in different ones.</li>
+        <li>Post intercompany eliminations, so transactions between your own organisations don't count twice.</li>
+        <li>Tie each organisation's column back to its own Xero report before the pack goes out.</li>
+      </ol>
 
       <h2>Why per-org exports stop scaling</h2>
       <p>With two or three organisations, the monthly export is tolerable. At ten or twenty it becomes the close. Every organisation adds another export to run in the right order, another set of accounts to reconcile against the group layout, and another place a rename or a late adjustment can throw the consolidated number off. The workbook is only as current as the last person to refresh every tab, and that person is doing it by hand.</p>
@@ -128,11 +139,11 @@ faq:
 <!-- CTA -->
 <section class="guide-cta">
   <div class="container">
-    <h2>See it on your organisations</h2>
-    <p>Bring the pack you rebuild every month. We'll show you the same layout, live across every Xero organisation and QBO file.</p>
+    <h2>Your first report, set up free</h2>
+    <p>Every free trial includes one report set up by our team. Show us how you build it on a 30-minute screen share, and we rebuild it in your own workbook, connected to every Xero organisation and QBO file.</p>
     <div class="guide-cta-actions">
-      <a href="{{ '/contact' | relative_url }}" class="btn btn-primary btn-lg">Book a demo</a>
-      <a href="{{ '/services' | relative_url }}" class="btn btn-outline btn-lg">Custom build</a>
+      <a href="{{ '/#setup' | relative_url }}" class="btn btn-primary btn-lg">Set Up My First Report</a>
+      <a href="{{ '/contact' | relative_url }}" class="btn btn-outline btn-lg">Book a demo</a>
     </div>
     <a href="mailto:info@geniussheets.us" class="guide-cta-email">info@geniussheets.us</a>
   </div>

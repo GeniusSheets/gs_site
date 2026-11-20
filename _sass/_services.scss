@@ -85,6 +85,45 @@
   }
 }
 
+.service-ai-cards {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.service-ai-card {
+  background: $bg;
+  border: 1px solid $border;
+  border-radius: $radius-lg;
+  padding: 20px 24px;
+  box-shadow: $shadow-sm;
+
+  h3 {
+    font-size: 1.125rem;
+    margin: 8px 0 6px;
+    color: $secondary;
+  }
+
+  p {
+    color: $text-light;
+    font-size: 0.9375rem;
+    line-height: 1.55;
+    margin: 0;
+  }
+}
+
+.service-ai-badge {
+  display: inline-block;
+  background: $primary;
+  color: $accent;
+  font-size: 0.75rem;
+  font-weight: 600;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+  padding: 4px 10px;
+  border-radius: $radius-sm;
+}
+
 .services-cta {
   padding: $section-padding;
   text-align: center;

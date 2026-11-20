@@ -57,3 +57,7 @@ exclude:
   - README.md
   - MARKETING_PLAN.md
   - whats_new.md
+  - AGENTS.md
+  - CLAUDE.md
+  - GEMINI.md
+  - REVIEW.md

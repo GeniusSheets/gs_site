@@ -10,6 +10,11 @@ Missing something or want detail on a specific release? Email info@geniussheets.
 
 ### November 2026
 
+#### Portfolio briefing dashboard, streamlined navigation, and account settings
+Platforms: Web dashboard
+
+The web dashboard home screen now opens on a portfolio briefing across all of your connected QuickBooks and Xero companies. A top health strip highlights active alerts, connections needing re-authentication, and chart-of-accounts changes from the last 7 days. Below it, you can ask Genie a question directly from the dashboard, review firing alerts across every company (with one-click links to investigate in Genie or Alerts), and scan recent QuickBooks account changes that may affect workbook formulas. The Connected Companies table now shows per-company alert and chart-of-accounts badges with quick filters for companies that need attention. Navigation is streamlined around Dashboard, Alerts, Activity, EBITDA, and Genie, with a new account menu holding Account Settings (update your display name and password), Manage Subscription, Setup & Add-ins, What's New, and FAQ.
+
 #### Adjusted EBITDA: a documented, diligence-ready EBITDA every month
 Platforms: Web dashboard, Excel, Google Sheets
 
